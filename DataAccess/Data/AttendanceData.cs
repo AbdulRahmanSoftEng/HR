@@ -3,7 +3,7 @@ using Microsoft.Data.SqlClient;
 using System.Data;
 using DataAccess.Settings;
 
-namespace DataAccessLayer.Data
+namespace DataAccess.Data
 {
     public class AttendanceData
     {

@@ -22,3 +22,8 @@ D:\AllProjects\RoadMapWeb\Projects\HR\BuisnessLogic\obj\Debug\net8.0\refint\Buis
 D:\AllProjects\RoadMapWeb\Projects\HR\BuisnessLogic\obj\Debug\net8.0\BuisnessLogic.pdb
 D:\AllProjects\RoadMapWeb\Projects\HR\BuisnessLogic\obj\Debug\net8.0\ref\BuisnessLogic.dll
 D:\AllProjects\RoadMapWeb\Projects\HR\BuisnessLogic\obj\Debug\net8.0\Buisness.22E12408.Up2Date
+D:\AllProjects\RoadMapWeb\Projects\HR\BuisnessLogic\bin\Debug\net8.0\DataAccess.dll
+D:\AllProjects\RoadMapWeb\Projects\HR\BuisnessLogic\bin\Debug\net8.0\DataAccess.pdb
+D:\AllProjects\RoadMapWeb\Projects\HR\BuisnessLogic\bin\Debug\net8.0\DataAccess.dll.config
+D:\AllProjects\RoadMapWeb\Projects\HR\BuisnessLogic\obj\Debug\net8.0\BuisnessLogic.csproj.AssemblyReference.cache
+D:\AllProjects\RoadMapWeb\Projects\HR\BuisnessLogic\obj\Debug\net8.0\BuisnessLogic.sourcelink.json

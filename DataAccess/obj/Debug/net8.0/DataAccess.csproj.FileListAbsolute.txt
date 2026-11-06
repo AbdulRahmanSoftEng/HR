@@ -26,3 +26,4 @@ D:\AllProjects\RoadMapWeb\Projects\HR\DataAccess\obj\Debug\net8.0\refint\DataAcc
 D:\AllProjects\RoadMapWeb\Projects\HR\DataAccess\obj\Debug\net8.0\DataAccess.pdb
 D:\AllProjects\RoadMapWeb\Projects\HR\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
 D:\AllProjects\RoadMapWeb\Projects\HR\DataAccess\obj\Debug\net8.0\DataAccess.csproj.Up2Date
+D:\AllProjects\RoadMapWeb\Projects\HR\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json
