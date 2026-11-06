@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../BuisnessLogic/BuisnessLogic.csproj" />
+  <Project Path="../DataAccess/DataAccess.csproj" />
+  <Project Path="HRMSystem.csproj" />
+</Solution>
