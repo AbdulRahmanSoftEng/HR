@@ -16,30 +16,30 @@ namespace BuisnessLogic
             get
             {
                 return new AttendanceDTO(
-                    AttendanceID,
-                    EmployeeID,
-                    EmployeeName,
-                    AttendanceDate,
-                    CheckInTime,
-                    CheckOutTime,
-                    Notes
+                    this.AttendanceID,
+                    this.EmployeeID,
+                    this.FullName,
+                    this.AttendanceDate,
+                    this.CheckInTime,
+                    this.CheckOutTime,
+                    this.Notes
                 );
             }
         }
 
         public int AttendanceID { get; set; }
         public int EmployeeID { get; set; }
-        public string EmployeeName { get; set; }
+        public string FullName { get; set; }
         public DateTime AttendanceDate { get; set; }
-        public DateTime CheckInTime { get; set; }
-        public DateTime? CheckOutTime { get; set; }
+        public TimeSpan CheckInTime { get; set; }
+        public TimeSpan? CheckOutTime { get; set; }
         public string? Notes { get; set; }
 
         public Attendance(AttendanceDTO ADTO)
         {
             AttendanceID = ADTO.AttendanceID;
             EmployeeID = ADTO.EmployeeID;
-            EmployeeName = ADTO.EmployeeName;
+            FullName = ADTO.FullName;
             AttendanceDate = ADTO.AttendanceDate;
             CheckInTime = ADTO.CheckIn;
             CheckOutTime = ADTO.CheckOut;

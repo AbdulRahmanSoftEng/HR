@@ -32,13 +32,13 @@ namespace DataAccess.Data
                             attendanceList.Add(new AttendanceDTO(
                                 reader.GetInt32(reader.GetOrdinal("AttendanceID")),
                                 reader.GetInt32(reader.GetOrdinal("EmployeeID")),
-                                reader.GetString(reader.GetOrdinal("EmployeeName")),
+                                reader.GetString(reader.GetOrdinal("FullName")),
                                 reader.GetDateTime(reader.GetOrdinal("AttendanceDate")),
-                                reader.GetDateTime(reader.GetOrdinal("CheckIn")),
+                                reader.GetTimeSpan(reader.GetOrdinal("CheckIn")),
 
                                 reader.IsDBNull(reader.GetOrdinal("CheckOut"))
                                     ? null
-                                    : reader.GetDateTime(reader.GetOrdinal("CheckOut")),
+                                    : reader.GetTimeSpan(reader.GetOrdinal("CheckOut")),
 
                                 reader.IsDBNull(reader.GetOrdinal("Notes"))
                                     ? null
@@ -79,13 +79,13 @@ namespace DataAccess.Data
                             return new AttendanceDTO(
                                 reader.GetInt32(reader.GetOrdinal("AttendanceID")),
                                 reader.GetInt32(reader.GetOrdinal("EmployeeID")),
-                                reader.GetString(reader.GetOrdinal("EmployeeName")),
+                                reader.GetString(reader.GetOrdinal("FullName")),
                                 reader.GetDateTime(reader.GetOrdinal("AttendanceDate")),
-                                reader.GetDateTime(reader.GetOrdinal("CheckIn")),
+                                reader.GetTimeSpan(reader.GetOrdinal("CheckIn")),
 
                                 reader.IsDBNull(reader.GetOrdinal("CheckOut"))
                                     ? null
-                                    : reader.GetDateTime(reader.GetOrdinal("CheckOut")),
+                                    : reader.GetTimeSpan(reader.GetOrdinal("CheckOut")),
 
                                 reader.IsDBNull(reader.GetOrdinal("Notes"))
                                     ? null
@@ -128,13 +128,13 @@ namespace DataAccess.Data
                             attendanceList.Add(new AttendanceDTO(
                                 reader.GetInt32(reader.GetOrdinal("AttendanceID")),
                                 reader.GetInt32(reader.GetOrdinal("EmployeeID")),
-                                reader.GetString(reader.GetOrdinal("EmployeeName")),
+                                reader.GetString(reader.GetOrdinal("FullName")),
                                 reader.GetDateTime(reader.GetOrdinal("AttendanceDate")),
-                                reader.GetDateTime(reader.GetOrdinal("CheckIn")),
+                                reader.GetTimeSpan(reader.GetOrdinal("CheckIn")),
 
                                 reader.IsDBNull(reader.GetOrdinal("CheckOut"))
                                     ? null
-                                    : reader.GetDateTime(reader.GetOrdinal("CheckOut")),
+                                    : reader.GetTimeSpan(reader.GetOrdinal("CheckOut")),
 
                                 reader.IsDBNull(reader.GetOrdinal("Notes"))
                                     ? null
@@ -169,9 +169,19 @@ namespace DataAccess.Data
                     command.Parameters.Add("@Notes", SqlDbType.NVarChar, 500)
                         .Value = (object?)notes ?? DBNull.Value;
 
+                    SqlParameter outputID = new SqlParameter(
+                        "@NewAttendanceID", SqlDbType.Int)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+
+                    command.Parameters.Add(outputID);
+
                     connection.Open();
 
-                    return Convert.ToInt32(command.ExecuteScalar());
+                    command.ExecuteNonQuery();
+
+                    return Convert.ToInt32(outputID.Value);
                 }
             }
         }

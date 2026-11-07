@@ -11,15 +11,15 @@ namespace DataAccess.DTOs
         public AttendanceDTO(
             int attendanceID,
             int employeeID,
-            string employeeName,
+            string fullName,
             DateTime attendanceDate,
-            DateTime checkIn,
-            DateTime? checkOut,
+            TimeSpan checkIn,
+            TimeSpan? checkOut,
             string? notes)
         {
             AttendanceID = attendanceID;
             EmployeeID = employeeID;
-            EmployeeName = employeeName;
+            FullName = fullName;
             AttendanceDate = attendanceDate;
             CheckIn = checkIn;
             CheckOut = checkOut;
@@ -31,14 +31,14 @@ namespace DataAccess.DTOs
         public int EmployeeID { get; set; }
 
         // اسم الموظف لعرضه في شاشة الحضور
-        public string EmployeeName { get; set; }
+        public string FullName { get; set; }
 
         public DateTime AttendanceDate { get; set; }
 
-        public DateTime CheckIn { get; set; }
+        public TimeSpan CheckIn { get; set; }
 
         // قد لا يكون الموظف سجل الانصراف بعد
-        public DateTime? CheckOut { get; set; }
+        public TimeSpan? CheckOut { get; set; }
 
         public string? Notes { get; set; }
     }
