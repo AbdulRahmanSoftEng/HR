@@ -12,7 +12,7 @@ namespace DataAccess.Settings
         // ضع Connection String هنا
         public static readonly string connection =
             @"Server=ABDULRAHMAN\MSSQLSERVER2022; 
-            Database=StudentsDB;
+            Database=HRManagementSystem;
             Integrated Security=true;
             TrustServerCertificate=True;
             Connection Timeout=30;";

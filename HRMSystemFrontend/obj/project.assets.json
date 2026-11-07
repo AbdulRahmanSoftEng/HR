@@ -763,11 +763,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\AllProjects\\RoadMapWeb\\CourceFullRestAPI\\Projects\\HRMSystemFrontend\\HRMSystemFrontend.csproj",
+      "projectUniqueName": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\HRMSystemFrontend.csproj",
       "projectName": "HRMSystemFrontend",
-      "projectPath": "D:\\AllProjects\\RoadMapWeb\\CourceFullRestAPI\\Projects\\HRMSystemFrontend\\HRMSystemFrontend.csproj",
+      "projectPath": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\HRMSystemFrontend.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "D:\\AllProjects\\RoadMapWeb\\CourceFullRestAPI\\Projects\\HRMSystemFrontend\\obj\\",
+      "outputPath": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
@@ -842,5 +842,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

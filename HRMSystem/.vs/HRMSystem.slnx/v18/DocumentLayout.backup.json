@@ -1,12 +1,59 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystem\\controllers\\departementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|solutionrelative:controllers\\departementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E88E456-0660-50D6-7B4F-779BBC1EBE8E}|..\\BuisnessLogic\\BuisnessLogic.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\buisnesslogic\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DepartementController.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\Controllers\\DepartementController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DepartementController.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\Controllers\\DepartementController.cs*",
+              "RelativeToolTip": "Controllers\\DepartementController.cs*",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAUwE4AAAB7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T09:51:42.543Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Department.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\BuisnessLogic\\Department.cs",
+              "RelativeDocumentMoniker": "..\\BuisnessLogic\\Department.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\BuisnessLogic\\Department.cs",
+              "RelativeToolTip": "..\\BuisnessLogic\\Department.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAADgv1sAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T10:06:33.826Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
