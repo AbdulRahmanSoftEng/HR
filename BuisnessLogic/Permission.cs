@@ -59,7 +59,7 @@ namespace BuisnessLogic
             return PermissionData.GetAllPermissions();
         }
 
-        public static Permission? Find(int permissionID)
+        public static Permission? FindByID(int permissionID)
         {
             PermissionDTO? PDTO =
                 PermissionData.GetPermissionById(permissionID);

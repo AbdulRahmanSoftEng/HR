@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 namespace DataAccess.DTOs
 {
     public class DashboardDTO
-    {
+    { 
         public DashboardDTO(
             int activeEmployees,
             int activeDepartments,
             int todayAttendance,
             int todayAbsence)
         {
-            ActiveEmployees = activeEmployees;
-            ActiveDepartments = activeDepartments;
-            TodayAttendance = todayAttendance;
-            TodayAbsence = todayAbsence;
+            this.ActiveEmployees = activeEmployees;
+            this.ActiveDepartments = activeDepartments;
+            this.TodayAttendance = todayAttendance;
+            this.TodayAbsence = todayAbsence;
         }
 
         public int ActiveEmployees { get; set; }

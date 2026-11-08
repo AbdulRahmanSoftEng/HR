@@ -11,9 +11,9 @@ namespace DataAccess.Data
         // 1. Get All Users
         // =========================================
 
-        public static List<UserDTO> GetAllUsers()
+        public static List<FullUserDTO> GetAllUsers()
         {
-            var usersList = new List<UserDTO>();
+            var usersList = new List<FullUserDTO>();
 
             using (SqlConnection connection =
                    new SqlConnection(DbSettings.connection))
@@ -29,23 +29,70 @@ namespace DataAccess.Data
                     {
                         while (reader.Read())
                         {
-                            usersList.Add(new UserDTO(
-                                reader.GetInt32(reader.GetOrdinal("UserID")),
-                                reader.GetInt32(reader.GetOrdinal("EmployeeID")),
-                                reader.GetString(reader.GetOrdinal("EmployeeCode")),
-                                reader.GetString(reader.GetOrdinal("FullName")),
-                                reader.GetString(reader.GetOrdinal("Username")),
-                                reader.GetInt32(reader.GetOrdinal("RoleID")),
-                                reader.GetString(reader.GetOrdinal("RoleName")),
-                                reader.GetBoolean(reader.GetOrdinal("IsActive")),
-                                reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
-                            ));
+                            usersList.Add(new FullUserDTO
+                            {
+                                UserID = reader.GetInt32(reader.GetOrdinal("UserID")),
+                                EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),
+                                EmployeeCode = reader.GetString(reader.GetOrdinal("EmployeeCode")),
+                                FullName = reader.GetString(reader.GetOrdinal("FullName")),
+                                Username = reader.GetString(reader.GetOrdinal("Username")),
+                                RoleID = reader.GetInt32(reader.GetOrdinal("RoleID")),
+                                RoleName = reader.GetString(reader.GetOrdinal("RoleName")),
+                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
+                                
+                            });
                         }
                     }
                 }
             }
 
             return usersList;
+        }
+
+
+        // =========================================
+        // 2. Get Full User By ID
+        // =========================================
+
+        public static FullUserDTO? GetFullUserById(int userID)
+        {
+            using (SqlConnection connection =
+                   new SqlConnection(DbSettings.connection))
+            {
+                using (SqlCommand command =
+                       new SqlCommand("SP_GetFullUserById", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.Add("@UserID", SqlDbType.Int)
+                        .Value = userID;
+
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new FullUserDTO
+                            {
+                                UserID = reader.GetInt32(reader.GetOrdinal("UserID")),
+                                EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),
+                                EmployeeCode = reader.GetString(reader.GetOrdinal("EmployeeCode")),
+                                FullName = reader.GetString(reader.GetOrdinal("FullName")),
+                                Username = reader.GetString(reader.GetOrdinal("Username")),
+                                RoleID = reader.GetInt32(reader.GetOrdinal("RoleID")),
+                                RoleName = reader.GetString(reader.GetOrdinal("RoleName")),
+                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
+
+                            };
+                        }
+                    }
+                }
+            }
+
+            return null;
         }
 
 
@@ -72,17 +119,16 @@ namespace DataAccess.Data
                     {
                         if (reader.Read())
                         {
-                            return new UserDTO(
-                                reader.GetInt32(reader.GetOrdinal("UserID")),
-                                reader.GetInt32(reader.GetOrdinal("EmployeeID")),
-                                reader.GetString(reader.GetOrdinal("EmployeeCode")),
-                                reader.GetString(reader.GetOrdinal("FullName")),
-                                reader.GetString(reader.GetOrdinal("Username")),
-                                reader.GetInt32(reader.GetOrdinal("RoleID")),
-                                reader.GetString(reader.GetOrdinal("RoleName")),
-                                reader.GetBoolean(reader.GetOrdinal("IsActive")),
-                                reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
-                            );
+                            return new UserDTO
+                            {
+                                UserID = reader.GetInt32(reader.GetOrdinal("UserID")),
+                                EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),
+                                Username = reader.GetString(reader.GetOrdinal("Username")),
+                                RoleID = reader.GetInt32(reader.GetOrdinal("RoleID")),
+                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
+
+                            };
                         }
                     }
                 }
@@ -115,17 +161,18 @@ namespace DataAccess.Data
                     {
                         if (reader.Read())
                         {
-                            return new UserLoginDTO(
-                                reader.GetInt32(reader.GetOrdinal("UserID")),
-                                reader.GetInt32(reader.GetOrdinal("EmployeeID")),
-                                reader.GetString(reader.GetOrdinal("Username")),
-                                reader.GetString(reader.GetOrdinal("PasswordHash")),
-                                reader.GetInt32(reader.GetOrdinal("RoleID")),
-                                reader.GetString(reader.GetOrdinal("RoleName")),
-                                reader.GetBoolean(reader.GetOrdinal("IsActive")),
-                                reader.GetString(reader.GetOrdinal("FullName")),
-                                reader.GetBoolean(reader.GetOrdinal("EmployeeIsActive"))
-                            );
+                            return new UserLoginDTO
+                            { 
+                                UserID = reader.GetInt32(reader.GetOrdinal("UserID")),
+                                EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),
+                                Username = reader.GetString(reader.GetOrdinal("Username")),
+                                PasswordHash = reader.GetString(reader.GetOrdinal("PasswordHash")),
+                                RoleID = reader.GetInt32(reader.GetOrdinal("RoleID")),
+                                RoleName = reader.GetString(reader.GetOrdinal("RoleName")),
+                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                                FullName = reader.GetString(reader.GetOrdinal("FullName")),
+                                EmployeeIsActive = reader.GetBoolean(reader.GetOrdinal("EmployeeIsActive"))
+                            };
                         }
                     }
                 }
@@ -139,11 +186,7 @@ namespace DataAccess.Data
         // 4. Add User
         // =========================================
 
-        public static int AddUser(
-            int employeeID,
-            string username,
-            string passwordHash,
-            int roleID)
+        public static int AddUser(UserDTO user)
         {
             using (SqlConnection connection =
                    new SqlConnection(DbSettings.connection))
@@ -154,16 +197,16 @@ namespace DataAccess.Data
                     command.CommandType = CommandType.StoredProcedure;
 
                     command.Parameters.Add("@EmployeeID", SqlDbType.Int)
-                        .Value = employeeID;
+                        .Value = user.EmployeeID;
 
                     command.Parameters.Add("@Username", SqlDbType.NVarChar, 100)
-                        .Value = username;
+                        .Value = user.Username;
 
                     command.Parameters.Add("@PasswordHash", SqlDbType.NVarChar, 255)
-                        .Value = passwordHash;
+                        .Value = user.Password;
 
                     command.Parameters.Add("@RoleID", SqlDbType.Int)
-                        .Value = roleID;
+                        .Value = user.RoleID;
 
                     SqlParameter outputID = new SqlParameter(
                         "@NewUserID", SqlDbType.Int)

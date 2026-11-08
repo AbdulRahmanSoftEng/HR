@@ -9,7 +9,7 @@ using DataAccess.DTOs;
 
 namespace BuisnessLogic
 {
-    public class User
+    public class clsUser
     {
         public enum enMode { AddNew = 0, Update = 1 }
 
@@ -18,21 +18,39 @@ namespace BuisnessLogic
         // يستخدم داخلياً عند الإضافة أو تغيير كلمة المرور.
         private string? _PasswordHash;
 
+        public FullUserDTO FUDTO
+        {
+            get
+            {
+                return new FullUserDTO
+                { 
+                    UserID = this.UserID,
+                    EmployeeID = this.EmployeeID,
+                    EmployeeCode = this.EmployeeCode,
+                    FullName = this.FullName,
+                    Username = this.Username,
+                    RoleID = this.RoleID,
+                    RoleName = this.RoleName,
+                    IsActive = this.IsActive,
+                    CreatedAt = this.CreatedAt
+                };
+            }
+        }
+
         public UserDTO UDTO
         {
             get
             {
-                return new UserDTO(
-                    UserID,
-                    EmployeeID,
-                    EmployeeCode,
-                    FullName,
-                    Username,
-                    RoleID,
-                    RoleName,
-                    IsActive,
-                    CreatedAt
-                );
+                return new UserDTO
+                {
+                    UserID = this.UserID,
+                    EmployeeID = this.EmployeeID,
+                    Username = this.Username,
+                    Password = this.Password,
+                    RoleID = this.RoleID,
+                    IsActive = this.IsActive,
+                    CreatedAt = this.CreatedAt
+                };
             }
         }
 
@@ -41,23 +59,42 @@ namespace BuisnessLogic
         public string? EmployeeCode { get; set; }
         public string? FullName { get; set; }
         public string Username { get; set; }
+        public string Password { get; set; }
         public int RoleID { get; set; }
         public string? RoleName { get; set; }
         public bool IsActive { get; set; }
         public DateTime CreatedAt { get; set; }
 
-        public User(
+        public clsUser(
+            FullUserDTO FUDTO,
+            enMode cMode = enMode.AddNew,
+            string? passwordHash = null)
+        {
+            UserID = FUDTO.UserID;
+            EmployeeID = FUDTO.EmployeeID;
+            EmployeeCode = FUDTO.EmployeeCode;
+            FullName = FUDTO.FullName;
+            Username = FUDTO.Username;
+            Password = FUDTO.Password;
+            RoleID = FUDTO.RoleID;
+            RoleName = FUDTO.RoleName;
+            IsActive = FUDTO.IsActive;
+            CreatedAt = FUDTO.CreatedAt;
+
+            _PasswordHash = passwordHash;
+            Mode = cMode;
+        }
+
+        public clsUser(
             UserDTO UDTO,
             enMode cMode = enMode.AddNew,
             string? passwordHash = null)
         {
             UserID = UDTO.UserID;
             EmployeeID = UDTO.EmployeeID;
-            EmployeeCode = UDTO.EmployeeCode;
-            FullName = UDTO.FullName;
             Username = UDTO.Username;
+            Password = UDTO.Password;
             RoleID = UDTO.RoleID;
-            RoleName = UDTO.RoleName;
             IsActive = UDTO.IsActive;
             CreatedAt = UDTO.CreatedAt;
 
@@ -68,10 +105,7 @@ namespace BuisnessLogic
         private bool _AddNewUser()
         {
             UserID = UserData.AddUser(
-                EmployeeID,
-                Username,
-                _PasswordHash!,
-                RoleID
+                UDTO
             );
 
             return UserID > 0;
@@ -87,17 +121,17 @@ namespace BuisnessLogic
             );
         }
 
-        public static List<UserDTO> GetAllUsers()
+        public static List<FullUserDTO> GetAllUsers()
         {
             return UserData.GetAllUsers();
         }
 
-        public static User? Find(int userID)
+        public static clsUser? FindById(int userID)
         {
-            UserDTO? UDTO = UserData.GetUserById(userID);
+            FullUserDTO? FUDTO = UserData.GetFullUserById(userID);
 
-            if (UDTO != null)
-                return new User(UDTO, enMode.Update);
+            if (FUDTO != null)
+                return new clsUser(FUDTO, enMode.Update);
 
             return null;
         }
@@ -125,11 +159,6 @@ namespace BuisnessLogic
             }
 
             return false;
-        }
-
-        public void SetPasswordHash(string passwordHash)
-        {
-            _PasswordHash = passwordHash;
         }
 
         public static bool SetUserActiveStatus(int userID, bool isActive)

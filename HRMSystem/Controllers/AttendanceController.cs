@@ -13,7 +13,6 @@ namespace HRMSystem.Controllers
         // GET: api/Attendance/All
         [HttpGet("All", Name = "GetAllAttendance")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ActionResult<List<AttendanceDTO>> GetAllAttendance()
         {
@@ -33,7 +32,7 @@ namespace HRMSystem.Controllers
 
         // POST: api/Attendance/CheckIn
         [HttpPost("CheckIn", Name = "CheckInAttencance")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ActionResult<AttendanceDTO> CheckInAttencance(

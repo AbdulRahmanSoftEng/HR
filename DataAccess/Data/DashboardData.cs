@@ -40,5 +40,47 @@ namespace DataAccess.Data
 
             return new DashboardDTO(0, 0, 0, 0);
         }
+
+        // =========================================
+        // 1. Get Dashboard Recent Attendances
+        // =========================================
+
+        public static List<RecentAttendanceDTO> GetRecentAttendances()
+        {
+            List<RecentAttendanceDTO> recentAttendances = new List<RecentAttendanceDTO>();
+            using (SqlConnection connection =
+                   new SqlConnection(DbSettings.connection))
+            {
+                using (SqlCommand command =
+                       new SqlCommand("SP_GetRecentAttendances", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            recentAttendances.Add(
+                                new RecentAttendanceDTO(
+
+                                    reader.GetInt32(reader.GetOrdinal("AttendanceID")),
+                                    reader.GetString(reader.GetOrdinal("FullName")),
+                                    reader.GetString(reader.GetOrdinal("DepartmentName")),
+                                    reader.GetTimeSpan(reader.GetOrdinal("CheckIn")),
+                                    reader.IsDBNull(reader.GetOrdinal("CheckOut"))
+                                    ? null
+                                    : reader.GetTimeSpan(reader.GetOrdinal("CheckOut"))
+
+                                )
+                            );
+                        }
+                    }
+                }
+            }
+
+            return recentAttendances;
+        }
     }
 }

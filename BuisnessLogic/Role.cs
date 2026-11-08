@@ -60,7 +60,7 @@ namespace BuisnessLogic
             return RoleData.GetAllRoles();
         }
 
-        public static Role? Find(int roleID)
+        public static Role? FindByRoleID(int roleID)
         {
             RoleDTO? RDTO = RoleData.GetRoleById(roleID);
 

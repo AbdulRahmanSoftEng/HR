@@ -46,5 +46,11 @@ namespace BuisnessLogic
 
             return new Dashboard(DDTO);
         }
+
+        public static List<RecentAttendanceDTO> GetRecentAttendances()
+        {
+           return DashboardData.GetRecentAttendances();
+
+        }
     }
 }
