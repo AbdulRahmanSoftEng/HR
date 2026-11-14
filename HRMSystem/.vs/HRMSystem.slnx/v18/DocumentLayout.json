@@ -3,31 +3,31 @@
   "WorkspaceRootPath": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystem\\controllers\\rpermissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|solutionrelative:controllers\\rpermissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystem\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5E88E456-0660-50D6-7B4F-779BBC1EBE8E}|..\\BuisnessLogic\\BuisnessLogic.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\buisnesslogic\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystem\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|solutionrelative:controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystem\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|solutionrelative:controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0C1238F-3EC8-20F4-994E-AB5AB921761B}|..\\DataAccess\\DataAccess.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\dataaccess\\dtos\\attendancedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystem\\controllers\\permissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|solutionrelative:controllers\\permissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E88E456-0660-50D6-7B4F-779BBC1EBE8E}|..\\BuisnessLogic\\BuisnessLogic.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\buisnesslogic\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0C1238F-3EC8-20F4-994E-AB5AB921761B}|..\\DataAccess\\DataAccess.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\dataaccess\\settings\\dbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5E88E456-0660-50D6-7B4F-779BBC1EBE8E}|..\\BuisnessLogic\\BuisnessLogic.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\buisnesslogic\\clsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0C1238F-3EC8-20F4-994E-AB5AB921761B}|..\\DataAccess\\DataAccess.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\dataaccess\\dtos\\dashboarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0C1238F-3EC8-20F4-994E-AB5AB921761B}|..\\DataAccess\\DataAccess.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\dataaccess\\data\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0C1238F-3EC8-20F4-994E-AB5AB921761B}|..\\DataAccess\\DataAccess.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\dataaccess\\data\\dashboarddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0C1238F-3EC8-20F4-994E-AB5AB921761B}|..\\DataAccess\\DataAccess.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\dataaccess\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystem\\controllers\\rpermissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80BB69C-3C5D-65B1-2A7D-ED8F9FBCDCE1}|HRMSystem.csproj|solutionrelative:controllers\\rpermissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,117 +36,117 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 195,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmployeesController.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "Controllers\\EmployeesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T18:18:22.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AttendanceDTO.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\DataAccess\\DTOs\\AttendanceDTO.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\DTOs\\AttendanceDTO.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\DataAccess\\DTOs\\AttendanceDTO.cs",
+              "RelativeToolTip": "..\\DataAccess\\DTOs\\AttendanceDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T18:17:20.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAYwFoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T10:08:40.931Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 205,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "DbSettings.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\DataAccess\\Settings\\DbSettings.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Settings\\DbSettings.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\DataAccess\\Settings\\DbSettings.cs",
+              "RelativeToolTip": "..\\DataAccess\\Settings\\DbSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T17:28:23.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\DataAccess\\DTOs\\UserDTO.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\DTOs\\UserDTO.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\DataAccess\\DTOs\\UserDTO.cs",
+              "RelativeToolTip": "..\\DataAccess\\DTOs\\UserDTO.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAYwDMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T10:09:10.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserData.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\DataAccess\\Data\\UserData.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Data\\UserData.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\DataAccess\\Data\\UserData.cs",
+              "RelativeToolTip": "..\\DataAccess\\Data\\UserData.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAhwGcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T10:08:55.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "RPermissionController.cs",
               "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\Controllers\\RPermissionController.cs",
               "RelativeDocumentMoniker": "Controllers\\RPermissionController.cs",
-              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\Controllers\\RPermissionController.cs*",
-              "RelativeToolTip": "Controllers\\RPermissionController.cs*",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAiwEgAAAA1AAAAAAAAAA==",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\Controllers\\RPermissionController.cs",
+              "RelativeToolTip": "Controllers\\RPermissionController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-08T21:13:52.577Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PermissionController.cs",
-              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\Controllers\\PermissionController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PermissionController.cs",
-              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\Controllers\\PermissionController.cs",
-              "RelativeToolTip": "Controllers\\PermissionController.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAgwHgAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T20:56:40.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RoleController.cs",
-              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystem\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "Controllers\\RoleController.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAAHcAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T20:12:09.079Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RolePermission.cs",
-              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\BuisnessLogic\\RolePermission.cs",
-              "RelativeDocumentMoniker": "..\\BuisnessLogic\\RolePermission.cs",
-              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\BuisnessLogic\\RolePermission.cs",
-              "RelativeToolTip": "..\\BuisnessLogic\\RolePermission.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEIAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T21:13:32.807Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Permission.cs",
-              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\BuisnessLogic\\Permission.cs",
-              "RelativeDocumentMoniker": "..\\BuisnessLogic\\Permission.cs",
-              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\BuisnessLogic\\Permission.cs",
-              "RelativeToolTip": "..\\BuisnessLogic\\Permission.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAuwCsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T20:56:59.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "clsUser.cs",
               "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\BuisnessLogic\\clsUser.cs",
               "RelativeDocumentMoniker": "..\\BuisnessLogic\\clsUser.cs",
               "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\BuisnessLogic\\clsUser.cs",
               "RelativeToolTip": "..\\BuisnessLogic\\clsUser.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAmwEoAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-08T16:53:16.483Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DashboardDTO.cs",
-              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\DataAccess\\DTOs\\DashboardDTO.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\DTOs\\DashboardDTO.cs",
-              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\DataAccess\\DTOs\\DashboardDTO.cs",
-              "RelativeToolTip": "..\\DataAccess\\DTOs\\DashboardDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T15:54:56.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DashboardData.cs",
-              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\DataAccess\\Data\\DashboardData.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\Data\\DashboardData.cs",
-              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\DataAccess\\Data\\DashboardData.cs",
-              "RelativeToolTip": "..\\DataAccess\\Data\\DashboardData.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAAEEAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T15:49:55.937Z",
               "EditorCaption": ""
             }
           ]

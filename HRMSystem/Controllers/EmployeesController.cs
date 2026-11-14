@@ -10,11 +10,12 @@ namespace HRMSystem.Controllers
     [ApiController]
     public class EmployeesController : ControllerBase
     {
+       
         // GET: api/Employees/All
         [HttpGet("All", Name = "GetAllEmployees")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<List<EmployeeDTO>> GetAllEmployees()
+        public ActionResult<IEnumerable<EmployeeDTO>> GetAllEmployees()
         {
             try
             {

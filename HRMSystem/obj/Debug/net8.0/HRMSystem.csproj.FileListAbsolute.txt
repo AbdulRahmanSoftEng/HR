@@ -116,3 +116,4 @@ D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\bin\Debug\net8.0\BuisnessLogic.p
 D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\bin\Debug\net8.0\DataAccess.pdb
 D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\bin\Debug\net8.0\DataAccess.dll.config
 D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\obj\Debug\net8.0\HRMSystem.sourcelink.json
+D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\bin\Debug\net8.0\BCrypt-Net-Next.dll

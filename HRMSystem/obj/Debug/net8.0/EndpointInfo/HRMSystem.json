@@ -1934,7 +1934,7 @@
         }
       }
     },
-    "/api/User/All": {
+    "/api/Users/All": {
       "get": {
         "tags": [
           "User"
@@ -1976,7 +1976,7 @@
         }
       }
     },
-    "/api/User/AddNew": {
+    "/api/Users/AddNew": {
       "post": {
         "tags": [
           "User"
@@ -2007,17 +2007,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/UserLoginInfo"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/UserLoginInfo"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/UserLoginInfo"
                 }
               }
             }
@@ -2048,16 +2048,25 @@
         }
       }
     },
-    "/api/User/Login": {
+    "/api/Users/Login/{username}/{password}": {
       "get": {
         "tags": [
           "User"
         ],
-        "operationId": "FindByUsername",
+        "operationId": "LoginUser",
         "parameters": [
           {
             "name": "username",
-            "in": "query",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string"
             }
@@ -2069,17 +2078,37 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserLoginDTO"
+                  "$ref": "#/components/schemas/FullUserDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserLoginDTO"
+                  "$ref": "#/components/schemas/FullUserDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserLoginDTO"
+                  "$ref": "#/components/schemas/FullUserDTO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -2130,7 +2159,7 @@
         }
       }
     },
-    "/api/User/Find/{userID}": {
+    "/api/Users/Find/{userID}": {
       "get": {
         "tags": [
           "User"
@@ -2153,17 +2182,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserDTO"
+                  "$ref": "#/components/schemas/FullUserDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserDTO"
+                  "$ref": "#/components/schemas/FullUserDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserDTO"
+                  "$ref": "#/components/schemas/FullUserDTO"
                 }
               }
             }
@@ -2214,7 +2243,7 @@
         }
       }
     },
-    "/api/User/UpdateStatus": {
+    "/api/Users/UpdateStatus": {
       "put": {
         "tags": [
           "User"
@@ -2445,10 +2474,6 @@
             "type": "string",
             "nullable": true
           },
-          "password": {
-            "type": "string",
-            "nullable": true
-          },
           "isActive": {
             "type": "boolean"
           },
@@ -2471,6 +2496,9 @@
           "roleName": {
             "type": "string",
             "nullable": true
+          },
+          "employeeIsActive": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -2636,39 +2664,12 @@
         },
         "additionalProperties": false
       },
-      "UserLoginDTO": {
+      "UserLoginInfo": {
         "type": "object",
         "properties": {
           "userID": {
             "type": "integer",
             "format": "int32"
-          },
-          "employeeID": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "username": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "roleID": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "employeeCode": {
-            "type": "string",
-            "nullable": true
           },
           "fullName": {
             "type": "string",
@@ -2677,13 +2678,6 @@
           "roleName": {
             "type": "string",
             "nullable": true
-          },
-          "passwordHash": {
-            "type": "string",
-            "nullable": true
-          },
-          "employeeIsActive": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false

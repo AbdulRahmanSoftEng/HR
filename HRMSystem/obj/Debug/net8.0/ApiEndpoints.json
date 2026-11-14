@@ -591,7 +591,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.EmployeeDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DataAccess.DTOs.EmployeeDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1157,7 +1157,7 @@
   {
     "ContainingType": "HRMSystem.Controllers.UserController",
     "Method": "AddNewUser",
-    "RelativePath": "api/User/AddNew",
+    "RelativePath": "api/Users/AddNew",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -1170,7 +1170,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "DataAccess.DTOs.UserLoginInfo",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1198,7 +1198,7 @@
   {
     "ContainingType": "HRMSystem.Controllers.UserController",
     "Method": "GetAllUser",
-    "RelativePath": "api/User/All",
+    "RelativePath": "api/Users/All",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1224,7 +1224,7 @@
   {
     "ContainingType": "HRMSystem.Controllers.UserController",
     "Method": "FindById",
-    "RelativePath": "api/User/Find/{userID}",
+    "RelativePath": "api/Users/Find/{userID}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1237,7 +1237,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.UserDTO",
+        "Type": "DataAccess.DTOs.FullUserDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1273,8 +1273,8 @@
   },
   {
     "ContainingType": "HRMSystem.Controllers.UserController",
-    "Method": "FindByUsername",
-    "RelativePath": "api/User/Login",
+    "Method": "LoginUser",
+    "RelativePath": "api/Users/Login/{username}/{password}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1282,18 +1282,32 @@
       {
         "Name": "username",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.UserLoginDTO",
+        "Type": "DataAccess.DTOs.FullUserDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
           "text/json"
         ],
         "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
       },
       {
         "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
@@ -1319,12 +1333,12 @@
         "StatusCode": 500
       }
     ],
-    "EndpointName": "FindByUsername"
+    "EndpointName": "LoginUser"
   },
   {
     "ContainingType": "HRMSystem.Controllers.UserController",
     "Method": "SetUserActiveStatus",
-    "RelativePath": "api/User/UpdateStatus",
+    "RelativePath": "api/Users/UpdateStatus",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,

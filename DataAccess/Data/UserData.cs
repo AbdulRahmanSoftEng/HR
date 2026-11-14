@@ -35,6 +35,7 @@ namespace DataAccess.Data
                                 EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),
                                 EmployeeCode = reader.GetString(reader.GetOrdinal("EmployeeCode")),
                                 FullName = reader.GetString(reader.GetOrdinal("FullName")),
+                                EmployeeIsActive = reader.GetBoolean(reader.GetOrdinal("EmployeeIsActive")),
                                 Username = reader.GetString(reader.GetOrdinal("Username")),
                                 RoleID = reader.GetInt32(reader.GetOrdinal("RoleID")),
                                 RoleName = reader.GetString(reader.GetOrdinal("RoleName")),
@@ -97,52 +98,10 @@ namespace DataAccess.Data
 
 
         // =========================================
-        // 2. Get User By ID
-        // =========================================
-
-        public static UserDTO? GetUserById(int userID)
-        {
-            using (SqlConnection connection =
-                   new SqlConnection(DbSettings.connection))
-            {
-                using (SqlCommand command =
-                       new SqlCommand("SP_GetUserById", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    command.Parameters.Add("@UserID", SqlDbType.Int)
-                        .Value = userID;
-
-                    connection.Open();
-
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            return new UserDTO
-                            {
-                                UserID = reader.GetInt32(reader.GetOrdinal("UserID")),
-                                EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),
-                                Username = reader.GetString(reader.GetOrdinal("Username")),
-                                RoleID = reader.GetInt32(reader.GetOrdinal("RoleID")),
-                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
-                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
-
-                            };
-                        }
-                    }
-                }
-            }
-
-            return null;
-        }
-
-
-        // =========================================
         // 3. Get User By Username
         // =========================================
 
-        public static UserLoginDTO? GetUserByUsername(string username)
+        public static LoginDTO? LoginUser(string username)
         {
             using (SqlConnection connection =
                    new SqlConnection(DbSettings.connection))
@@ -161,7 +120,7 @@ namespace DataAccess.Data
                     {
                         if (reader.Read())
                         {
-                            return new UserLoginDTO
+                            return new LoginDTO
                             { 
                                 UserID = reader.GetInt32(reader.GetOrdinal("UserID")),
                                 EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),

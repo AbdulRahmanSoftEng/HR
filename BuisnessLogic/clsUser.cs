@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using BuisnessLogic.Utilities;
 using DataAccess.Data;
 using DataAccess.DTOs;
 
@@ -17,6 +17,19 @@ namespace BuisnessLogic
 
         // يستخدم داخلياً عند الإضافة أو تغيير كلمة المرور.
         private string? _PasswordHash;
+
+        public UserLoginInfo LDTO
+        {
+            get
+            {
+                return new UserLoginInfo
+                { 
+                    UserID = this.UserID,
+                    FullName = this.FullName,
+                    RoleName = this.RoleName
+                };
+            }
+        }
 
         public FullUserDTO FUDTO
         {
@@ -32,10 +45,13 @@ namespace BuisnessLogic
                     RoleID = this.RoleID,
                     RoleName = this.RoleName,
                     IsActive = this.IsActive,
+                    EmployeeIsActive = this.EmployeeIsActive,
                     CreatedAt = this.CreatedAt
                 };
             }
         }
+
+       
 
         public UserDTO UDTO
         {
@@ -63,6 +79,7 @@ namespace BuisnessLogic
         public int RoleID { get; set; }
         public string? RoleName { get; set; }
         public bool IsActive { get; set; }
+        public bool EmployeeIsActive { get; set; }
         public DateTime CreatedAt { get; set; }
 
         public clsUser(
@@ -75,13 +92,31 @@ namespace BuisnessLogic
             EmployeeCode = FUDTO.EmployeeCode;
             FullName = FUDTO.FullName;
             Username = FUDTO.Username;
-            Password = FUDTO.Password;
             RoleID = FUDTO.RoleID;
             RoleName = FUDTO.RoleName;
             IsActive = FUDTO.IsActive;
             CreatedAt = FUDTO.CreatedAt;
 
             _PasswordHash = passwordHash;
+            Mode = cMode;
+        }
+
+        public clsUser(
+            LoginDTO LDTO,
+            enMode cMode = enMode.AddNew)
+        {
+            UserID = LDTO.UserID;
+            EmployeeID = LDTO.EmployeeID;
+            EmployeeCode = LDTO.EmployeeCode;
+            FullName = LDTO.FullName;
+            Username = LDTO.Username;
+            RoleID = LDTO.RoleID;
+            RoleName = LDTO.RoleName;
+            EmployeeIsActive = LDTO.EmployeeIsActive;
+            IsActive = LDTO.IsActive;
+            CreatedAt = LDTO.CreatedAt;
+
+            _PasswordHash = LDTO.PasswordHash;
             Mode = cMode;
         }
 
@@ -137,9 +172,14 @@ namespace BuisnessLogic
         }
 
         // مخصص لجلب بيانات المستخدم عند تسجيل الدخول.
-        public static UserLoginDTO? FindByUsername(string username)
+        public static clsUser? LoginUser(string username)
         {
-            return UserData.GetUserByUsername(username);
+            LoginDTO? LDTO = UserData.LoginUser(username);
+
+            if (LDTO != null)
+                return new clsUser(LDTO, enMode.Update);
+
+            return null;
         }
 
         public bool Save()
@@ -164,6 +204,16 @@ namespace BuisnessLogic
         public static bool SetUserActiveStatus(int userID, bool isActive)
         {
             return UserData.SetUserActiveStatus(userID, isActive);
+        }
+
+        public bool VerifyPassword(string passwordInput)
+        {
+            return PasswordHasher.VerifyPassword(password: passwordInput, hashedPassword: this._PasswordHash);
+        }
+
+        public static string HashPassword(string PasswordInput)
+        {
+            return PasswordHasher.HashPassword(password: PasswordInput);
         }
     }
 }

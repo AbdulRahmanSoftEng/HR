@@ -1,10 +1,11 @@
 ﻿using BuisnessLogic;
+using BuisnessLogic.Utilities;
 using DataAccess.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 namespace HRMSystem.Controllers
 {
-    [Route("api/User")]
+    [Route("api/Users")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -35,11 +36,12 @@ namespace HRMSystem.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<string> AddNewUser(UserDTO newUser)
+        public ActionResult<UserLoginInfo> AddNewUser(UserDTO newUser)
         {
             if(newUser == null ||
                 newUser.EmployeeID <= 0 ||
                 string.IsNullOrWhiteSpace(newUser.Username) ||
+                string.IsNullOrWhiteSpace(newUser.Password) ||
                 newUser.RoleID <= 0)
             {
                 return BadRequest("Data is invalid");
@@ -47,14 +49,15 @@ namespace HRMSystem.Controllers
 
             try
             {
+                newUser.Password = clsUser.HashPassword(newUser.Password); 
+
                 clsUser user = new clsUser(newUser);
                 if (!user.Save())
                     return StatusCode(
                             StatusCodes.Status500InternalServerError,
                             "internal server error");
 
-                newUser.UserID = user.UserID;
-                return CreatedAtRoute("FindByUserID", new { userID = user.UserID }, newUser);
+                return CreatedAtRoute("FindByUserID", new { userID = user.UserID }, user.FUDTO);
             }
             catch (Exception ex)
             {
@@ -66,26 +69,33 @@ namespace HRMSystem.Controllers
         }
 
         // GET: api/User/Login
-        [HttpGet("Login", Name = "FindByUsername")]
+        [HttpGet("Login/{username}/{password}", Name = "LoginUser")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<UserLoginDTO> FindByUsername(string username)
+        public ActionResult<FullUserDTO> LoginUser(string username, string password)
         {
-            if (string.IsNullOrWhiteSpace(username))
+            if (string.IsNullOrWhiteSpace(username)
+                || string.IsNullOrWhiteSpace(password))
             {
                 return BadRequest("Data is invalid");
             }
 
             try
             {
-                UserLoginDTO? user = clsUser.FindByUsername(username);
+
+                clsUser user = clsUser.LoginUser(username);
                 if (user == null)
                     return NotFound($"dose not exists user by Username {username}");
 
-               
-                return Ok(user);
+                if(!user.VerifyPassword(password))
+                {
+                    return Unauthorized("Invalid password");
+                }
+
+                return Ok(user.FUDTO);
             }
             catch (Exception ex)
             {
@@ -102,7 +112,7 @@ namespace HRMSystem.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<UserDTO> FindById(int userID)
+        public ActionResult<FullUserDTO> FindById(int userID)
         {
             if (userID <= 0 )
             {
@@ -111,12 +121,12 @@ namespace HRMSystem.Controllers
 
             try
             {
-                clsUser user = clsUser.FindById(userID);
+                clsUser? user = clsUser.FindById(userID);
                 if (user == null)
                     return NotFound($"dose not exists user by id {userID}");
 
 
-                return Ok(user.UDTO);
+                return Ok(user.FUDTO);
             }
             catch (Exception ex)
             {
