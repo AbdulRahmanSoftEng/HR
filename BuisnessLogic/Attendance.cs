@@ -15,15 +15,16 @@ namespace BuisnessLogic
         {
             get
             {
-                return new AttendanceDTO(
-                    this.AttendanceID,
-                    this.EmployeeID,
-                    this.FullName,
-                    this.AttendanceDate,
-                    this.CheckInTime,
-                    this.CheckOutTime,
-                    this.Notes
-                );
+                return new AttendanceDTO
+                {
+                    AttendanceID = this.AttendanceID,
+                    EmployeeID = this.EmployeeID,
+                    FullName = this.FullName,
+                    AttendanceDate = this.AttendanceDate,
+                    CheckIn = this.CheckInTime,
+                    CheckOut = this.CheckOutTime,
+                    Notes = this.Notes
+               };
             }
         }
 

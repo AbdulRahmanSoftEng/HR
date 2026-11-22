@@ -715,7 +715,7 @@
   {
     "ContainingType": "HRMSystem.Controllers.PermissionController",
     "Method": "AddNewPermission",
-    "RelativePath": "api/Permission/AddNew",
+    "RelativePath": "api/Permissions/AddNew",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -756,7 +756,7 @@
   {
     "ContainingType": "HRMSystem.Controllers.PermissionController",
     "Method": "GetAllPermission",
-    "RelativePath": "api/Permission/All",
+    "RelativePath": "api/Permissions/All",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -782,7 +782,7 @@
   {
     "ContainingType": "HRMSystem.Controllers.PermissionController",
     "Method": "FindByPermissionID",
-    "RelativePath": "api/Permission/Find/{permissionID}",
+    "RelativePath": "api/Permissions/Find/{permissionID}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -832,7 +832,7 @@
   {
     "ContainingType": "HRMSystem.Controllers.PermissionController",
     "Method": "UpdatePermission",
-    "RelativePath": "api/Permission/Update",
+    "RelativePath": "api/Permissions/Update",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -876,9 +876,9 @@
     "EndpointName": "UpdatePermission"
   },
   {
-    "ContainingType": "HRMSystem.Controllers.RoleController",
+    "ContainingType": "HRMSystem.Controllers.RolesController",
     "Method": "AddNewRole",
-    "RelativePath": "api/Role/AddNew",
+    "RelativePath": "api/Roles/AddNew",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -917,9 +917,9 @@
     "EndpointName": "AddNewRole"
   },
   {
-    "ContainingType": "HRMSystem.Controllers.RoleController",
+    "ContainingType": "HRMSystem.Controllers.RolesController",
     "Method": "GetAllUser",
-    "RelativePath": "api/Role/All",
+    "RelativePath": "api/Roles/All",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -940,12 +940,12 @@
         "StatusCode": 500
       }
     ],
-    "EndpointName": "GetAllRole"
+    "EndpointName": "GetAllRoles"
   },
   {
-    "ContainingType": "HRMSystem.Controllers.RoleController",
+    "ContainingType": "HRMSystem.Controllers.RolesController",
     "Method": "FindByRoleID",
-    "RelativePath": "api/Role/Find/{roleID}",
+    "RelativePath": "api/Roles/Find/{roleID}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -993,9 +993,9 @@
     "EndpointName": "FindByRoleID"
   },
   {
-    "ContainingType": "HRMSystem.Controllers.RoleController",
+    "ContainingType": "HRMSystem.Controllers.RolesController",
     "Method": "UpdateRole",
-    "RelativePath": "api/Role/Update",
+    "RelativePath": "api/Roles/Update",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -1156,6 +1156,56 @@
   },
   {
     "ContainingType": "HRMSystem.Controllers.UserController",
+    "Method": "FindByUserID",
+    "RelativePath": "api/Users/{userID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DataAccess.DTOs.FullUserDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ],
+    "EndpointName": "FindByUserID"
+  },
+  {
+    "ContainingType": "HRMSystem.Controllers.UserController",
     "Method": "AddNewUser",
     "RelativePath": "api/Users/AddNew",
     "HttpMethod": "POST",
@@ -1170,7 +1220,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.UserLoginInfo",
+        "Type": "DataAccess.DTOs.FullUserDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1220,56 +1270,6 @@
       }
     ],
     "EndpointName": "GetAllUser"
-  },
-  {
-    "ContainingType": "HRMSystem.Controllers.UserController",
-    "Method": "FindById",
-    "RelativePath": "api/Users/Find/{userID}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userID",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "DataAccess.DTOs.FullUserDTO",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 404
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 400
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
-      }
-    ],
-    "EndpointName": "FindByUserID"
   },
   {
     "ContainingType": "HRMSystem.Controllers.UserController",

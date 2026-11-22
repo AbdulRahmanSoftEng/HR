@@ -3,28 +3,52 @@
   "WorkspaceRootPath": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystemfrontend\\forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\dashbord\\frmdashbord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\dashbord\\frmdashbord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystemfrontend\\forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystemfrontend\\forms\\dashbord\\frmdashbord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\dashbord\\frmdashbord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystemfrontend\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\roles\\frmrolemanagements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\roles\\frmrolemanagements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystemfrontend\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystemfrontend\\forms\\roles\\frmrolemanagements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\roles\\frmrolemanagements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystemfrontend\\forms\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystemfrontend\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystemfrontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\permissions\\frmpermissionmanangements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\permissions\\frmpermissionmanangements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystemfrontend\\forms\\permissions\\frmpermissionmanangements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\permissions\\frmpermissionmanangements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystemfrontend\\forms\\permissions\\frmpermissionmanangements.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\permissions\\frmpermissionmanangements.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystemfrontend\\forms\\departments\\frmdepartmentmanagements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\departments\\frmdepartmentmanagements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\departments\\frmdepartmentmanagements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\departments\\frmdepartmentmanagements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|d:\\allprojects\\roadmapweb\\projects\\hr\\hrmsystemfrontend\\forms\\departments\\frmaddeditdep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\departments\\frmaddeditdep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\departments\\frmaddeditdep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7B5C7345-42FE-B557-2D1A-631420AD8039}|HRMSystemFrontend.csproj|solutionrelative:forms\\departments\\frmaddeditdep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,83 +58,164 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Login.cs",
-              "RelativeDocumentMoniker": "forms\\Login.cs",
-              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Login.cs [Design]",
-              "RelativeToolTip": "forms\\Login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T19:56:50.637Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T19:46:49.739Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.Designer.cs",
-              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Login.Designer.cs",
-              "RelativeDocumentMoniker": "forms\\Login.Designer.cs",
-              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Login.Designer.cs",
-              "RelativeToolTip": "forms\\Login.Designer.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAIwH8AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T19:26:19.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Main.cs",
-              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Main.cs",
-              "RelativeDocumentMoniker": "forms\\Main.cs",
-              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Main.cs*",
-              "RelativeToolTip": "forms\\Main.cs*",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAC4AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T19:03:29.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Main.cs [Design]",
-              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Main.cs",
-              "RelativeDocumentMoniker": "forms\\Main.cs",
-              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Main.cs [Design]*",
-              "RelativeToolTip": "forms\\Main.cs [Design]*",
+              "Title": "frmDashbord.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Dashbord\\frmDashbord.cs",
+              "RelativeDocumentMoniker": "forms\\Dashbord\\frmDashbord.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Dashbord\\frmDashbord.cs",
+              "RelativeToolTip": "forms\\Dashbord\\frmDashbord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T19:02:38.365Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-11-22T18:44:12.063Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Login.cs",
-              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Login.cs",
-              "RelativeDocumentMoniker": "forms\\Login.cs",
-              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Login.cs",
-              "RelativeToolTip": "forms\\Login.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAYwDsAAAAvAAAAAAAAAA==",
+              "Title": "frmRoleManagements.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Roles\\frmRoleManagements.cs",
+              "RelativeDocumentMoniker": "forms\\Roles\\frmRoleManagements.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Roles\\frmRoleManagements.cs",
+              "RelativeToolTip": "forms\\Roles\\frmRoleManagements.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T18:45:53.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-22T18:34:04.523Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmRoleManagements.cs [Design]",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Roles\\frmRoleManagements.cs",
+              "RelativeDocumentMoniker": "forms\\Roles\\frmRoleManagements.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Roles\\frmRoleManagements.cs [Design]",
+              "RelativeToolTip": "forms\\Roles\\frmRoleManagements.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-22T18:32:21.508Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-11-22T18:25:23.23Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmPermissionManangements.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Permissions\\frmPermissionManangements.cs",
+              "RelativeDocumentMoniker": "forms\\Permissions\\frmPermissionManangements.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Permissions\\frmPermissionManangements.cs",
+              "RelativeToolTip": "forms\\Permissions\\frmPermissionManangements.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAkwEgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-22T18:22:25.172Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmPermissionManangements.Designer.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Permissions\\frmPermissionManangements.Designer.cs",
+              "RelativeDocumentMoniker": "forms\\Permissions\\frmPermissionManangements.Designer.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Permissions\\frmPermissionManangements.Designer.cs",
+              "RelativeToolTip": "forms\\Permissions\\frmPermissionManangements.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-22T18:22:22.197Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmPermissionManangements.cs [Design]",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Permissions\\frmPermissionManangements.cs",
+              "RelativeDocumentMoniker": "forms\\Permissions\\frmPermissionManangements.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Permissions\\frmPermissionManangements.cs [Design]",
+              "RelativeToolTip": "forms\\Permissions\\frmPermissionManangements.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-22T18:22:14.941Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmDashbord.cs [Design]",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Dashbord\\frmDashbord.cs",
+              "RelativeDocumentMoniker": "forms\\Dashbord\\frmDashbord.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Dashbord\\frmDashbord.cs [Design]",
+              "RelativeToolTip": "forms\\Dashbord\\frmDashbord.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-22T18:21:57.221Z",
+              "EditorCaption": " [Design]",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmAddEditDep.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Departments\\frmAddEditDep.cs",
+              "RelativeDocumentMoniker": "forms\\Departments\\frmAddEditDep.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Departments\\frmAddEditDep.cs",
+              "RelativeToolTip": "forms\\Departments\\frmAddEditDep.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAWwD0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-22T18:11:49.965Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmAddEditDep.cs [Design]",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Departments\\frmAddEditDep.cs",
+              "RelativeDocumentMoniker": "forms\\Departments\\frmAddEditDep.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Departments\\frmAddEditDep.cs [Design]",
+              "RelativeToolTip": "forms\\Departments\\frmAddEditDep.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-22T18:05:02.172Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmDepartmentManagements.cs",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Departments\\frmDepartmentManagements.cs",
+              "RelativeDocumentMoniker": "forms\\Departments\\frmDepartmentManagements.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Departments\\frmDepartmentManagements.cs",
+              "RelativeToolTip": "forms\\Departments\\frmDepartmentManagements.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAuwBgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-22T17:53:07.512Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmDepartmentManagements.cs [Design]",
+              "DocumentMoniker": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Departments\\frmDepartmentManagements.cs",
+              "RelativeDocumentMoniker": "forms\\Departments\\frmDepartmentManagements.cs",
+              "ToolTip": "D:\\AllProjects\\RoadMapWeb\\Projects\\HR\\HRMSystemFrontend\\forms\\Departments\\frmDepartmentManagements.cs [Design]",
+              "RelativeToolTip": "forms\\Departments\\frmDepartmentManagements.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-22T17:50:24.542Z",
+              "OwnerCaption": "%2"
             }
           ]
         }

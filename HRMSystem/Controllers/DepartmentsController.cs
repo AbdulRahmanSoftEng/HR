@@ -66,7 +66,7 @@ namespace HRMSystem.Controllers
             {
                 return StatusCode(
                     StatusCodes.Status500InternalServerError, 
-                    "An unexpected error occurred."
+                    "An unexpected error occurred."+ex.Message
                     );
             }
         }

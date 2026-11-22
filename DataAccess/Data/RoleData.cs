@@ -29,14 +29,15 @@ namespace DataAccess.Data
                     {
                         while (reader.Read())
                         {
-                            rolesList.Add(new RoleDTO(
-                                reader.GetInt32(reader.GetOrdinal("RoleID")),
-                                reader.GetString(reader.GetOrdinal("RoleName")),
-                                reader.IsDBNull(reader.GetOrdinal("Description"))
+                            rolesList.Add(new RoleDTO
+                            {
+                                RoleID = reader.GetInt32(reader.GetOrdinal("RoleID")),
+                                RoleName = reader.GetString(reader.GetOrdinal("RoleName")),
+                                Description = reader.IsDBNull(reader.GetOrdinal("Description"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("Description")),
-                                reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
-                            ));
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
+                            });
                         }
                     }
                 }
@@ -69,14 +70,15 @@ namespace DataAccess.Data
                     {
                         if (reader.Read())
                         {
-                            return new RoleDTO(
-                                reader.GetInt32(reader.GetOrdinal("RoleID")),
-                                reader.GetString(reader.GetOrdinal("RoleName")),
-                                reader.IsDBNull(reader.GetOrdinal("Description"))
+                            return new RoleDTO
+                            {
+                                RoleID = reader.GetInt32(reader.GetOrdinal("RoleID")),
+                                RoleName = reader.GetString(reader.GetOrdinal("RoleName")),
+                                Description = reader.IsDBNull(reader.GetOrdinal("Description"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("Description")),
-                                reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
-                            );
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
+                            };
                         }
                     }
                 }

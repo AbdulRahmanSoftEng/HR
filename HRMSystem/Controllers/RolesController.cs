@@ -5,11 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HRMSystem.Controllers
 {
-    [Route("api/Role")]
+    [Route("api/Roles")]
     [ApiController]
-    public class RoleController : ControllerBase
+    public class RolesController : ControllerBase
     {
-        [HttpGet("All", Name = "GetAllRole")]
+        [HttpGet("All", Name = "GetAllRoles")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ActionResult<List<RoleDTO>> GetAllUser()

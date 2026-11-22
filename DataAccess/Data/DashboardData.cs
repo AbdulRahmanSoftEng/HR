@@ -1,7 +1,8 @@
 ﻿using DataAccess.DTOs;
+using DataAccess.Settings;
 using Microsoft.Data.SqlClient;
 using System.Data;
-using DataAccess.Settings;
+using System.Reflection.PortableExecutable;
 
 namespace DataAccess.Data
 {
@@ -27,18 +28,25 @@ namespace DataAccess.Data
                     {
                         if (reader.Read())
                         {
-                            return new DashboardDTO(
-                                reader.GetInt32(reader.GetOrdinal("ActiveEmployees")),
-                                reader.GetInt32(reader.GetOrdinal("ActiveDepartments")),
-                                reader.GetInt32(reader.GetOrdinal("TodayAttendance")),
-                                reader.GetInt32(reader.GetOrdinal("TodayAbsence"))
-                            );
+                            return new DashboardDTO
+                            {
+                                ActiveEmployees = reader.GetInt32(reader.GetOrdinal("ActiveEmployees")),
+                                ActiveDepartments = reader.GetInt32(reader.GetOrdinal("ActiveDepartments")),
+                                TodayAttendance = reader.GetInt32(reader.GetOrdinal("TodayAttendance")),
+                                TodayAbsence = reader.GetInt32(reader.GetOrdinal("TodayAbsence"))
+                            };
                         }
                     }
                 }
             }
 
-            return new DashboardDTO(0, 0, 0, 0);
+            return new DashboardDTO
+            {
+                ActiveEmployees = 0,
+                ActiveDepartments = 0,
+                TodayAttendance = 0,
+                TodayAbsence = 0
+            };
         }
 
         // =========================================
@@ -63,17 +71,18 @@ namespace DataAccess.Data
                         while (reader.Read())
                         {
                             recentAttendances.Add(
-                                new RecentAttendanceDTO(
+                                new RecentAttendanceDTO
+                                {
 
-                                    reader.GetInt32(reader.GetOrdinal("AttendanceID")),
-                                    reader.GetString(reader.GetOrdinal("FullName")),
-                                    reader.GetString(reader.GetOrdinal("DepartmentName")),
-                                    reader.GetTimeSpan(reader.GetOrdinal("CheckIn")),
-                                    reader.IsDBNull(reader.GetOrdinal("CheckOut"))
+                                    AttendanceID = reader.GetInt32(reader.GetOrdinal("AttendanceID")),
+                                    FullName = reader.GetString(reader.GetOrdinal("FullName")),
+                                    DepartmentName = reader.GetString(reader.GetOrdinal("DepartmentName")),
+                                    CheckIn = reader.GetTimeSpan(reader.GetOrdinal("CheckIn")),
+                                    CheckOut = reader.IsDBNull(reader.GetOrdinal("CheckOut"))
                                     ? null
                                     : reader.GetTimeSpan(reader.GetOrdinal("CheckOut"))
 
-                                )
+                                }
                             );
                         }
                     }

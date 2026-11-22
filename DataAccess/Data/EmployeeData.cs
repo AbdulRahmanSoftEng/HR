@@ -29,25 +29,26 @@ namespace DataAccess.Data
                     {
                         while (reader.Read())
                         {
-                            employeesList.Add(new EmployeeDTO(
-                                reader.GetInt32(reader.GetOrdinal("EmployeeID")),
-                                reader.GetString(reader.GetOrdinal("EmployeeCode")),
-                                reader.GetString(reader.GetOrdinal("FullName")),
+                            employeesList.Add(new EmployeeDTO
+                            {
+                                EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),
+                                EmployeeCode = reader.GetString(reader.GetOrdinal("EmployeeCode")),
+                                FullName = reader.GetString(reader.GetOrdinal("FullName")),
 
-                                reader.IsDBNull(reader.GetOrdinal("Phone"))
+                                Phone = reader.IsDBNull(reader.GetOrdinal("Phone"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("Phone")),
 
-                                reader.GetInt32(reader.GetOrdinal("DepartmentID")),
-                                reader.GetString(reader.GetOrdinal("DepartmentName")),
+                                DepartmentID = reader.GetInt32(reader.GetOrdinal("DepartmentID")),
+                                DepartmentName = reader.GetString(reader.GetOrdinal("DepartmentName")),
 
-                                reader.IsDBNull(reader.GetOrdinal("JobTitle"))
+                                JobTitle = reader.IsDBNull(reader.GetOrdinal("JobTitle"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("JobTitle")),
 
-                                reader.GetBoolean(reader.GetOrdinal("IsActive")),
-                                reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
-                            ));
+                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
+                            });
                         }
                     }
                 }
@@ -80,25 +81,26 @@ namespace DataAccess.Data
                     {
                         if (reader.Read())
                         {
-                            return new EmployeeDTO(
-                                reader.GetInt32(reader.GetOrdinal("EmployeeID")),
-                                reader.GetString(reader.GetOrdinal("EmployeeCode")),
-                                reader.GetString(reader.GetOrdinal("FullName")),
+                            return new EmployeeDTO
+                            {
+                                EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),
+                                EmployeeCode = reader.GetString(reader.GetOrdinal("EmployeeCode")),
+                                FullName = reader.GetString(reader.GetOrdinal("FullName")),
 
-                                reader.IsDBNull(reader.GetOrdinal("Phone"))
+                                Phone = reader.IsDBNull(reader.GetOrdinal("Phone"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("Phone")),
 
-                                reader.GetInt32(reader.GetOrdinal("DepartmentID")),
-                                reader.GetString(reader.GetOrdinal("DepartmentName")),
+                                DepartmentID = reader.GetInt32(reader.GetOrdinal("DepartmentID")),
+                                DepartmentName = reader.GetString(reader.GetOrdinal("DepartmentName")),
 
-                                reader.IsDBNull(reader.GetOrdinal("JobTitle"))
+                                JobTitle = reader.IsDBNull(reader.GetOrdinal("JobTitle"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("JobTitle")),
 
-                                reader.GetBoolean(reader.GetOrdinal("IsActive")),
-                                reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
-                            );
+                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
+                            };
                         }
                     }
                 }

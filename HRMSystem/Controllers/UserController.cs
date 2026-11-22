@@ -36,7 +36,7 @@ namespace HRMSystem.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<UserLoginInfo> AddNewUser(UserDTO newUser)
+        public ActionResult<FullUserDTO> AddNewUser(UserDTO newUser)
         {
             if(newUser == null ||
                 newUser.EmployeeID <= 0 ||
@@ -57,7 +57,9 @@ namespace HRMSystem.Controllers
                             StatusCodes.Status500InternalServerError,
                             "internal server error");
 
-                return CreatedAtRoute("FindByUserID", new { userID = user.UserID }, user.FUDTO);
+                user = clsUser.FindById(user.UserID);
+
+                return Ok(user.FUDTO);
             }
             catch (Exception ex)
             {
@@ -107,12 +109,12 @@ namespace HRMSystem.Controllers
         }
 
         // GET: api/User/Login
-        [HttpGet("Find/{userID}", Name = "FindByUserID")]
+        [HttpGet("{userID}", Name = "FindByUserID")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<FullUserDTO> FindById(int userID)
+        public ActionResult<FullUserDTO> FindByUserID(int userID)
         {
             if (userID <= 0 )
             {

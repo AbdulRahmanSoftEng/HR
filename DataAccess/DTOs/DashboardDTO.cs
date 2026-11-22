@@ -8,18 +8,7 @@ namespace DataAccess.DTOs
 {
     public class DashboardDTO
     { 
-        public DashboardDTO(
-            int activeEmployees,
-            int activeDepartments,
-            int todayAttendance,
-            int todayAbsence)
-        {
-            this.ActiveEmployees = activeEmployees;
-            this.ActiveDepartments = activeDepartments;
-            this.TodayAttendance = todayAttendance;
-            this.TodayAbsence = todayAbsence;
-        }
-
+     
         public int ActiveEmployees { get; set; }
         public int ActiveDepartments { get; set; }
         public int TodayAttendance { get; set; }

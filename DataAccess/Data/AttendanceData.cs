@@ -29,21 +29,22 @@ namespace DataAccess.Data
                     {
                         while (reader.Read())
                         {
-                            attendanceList.Add(new AttendanceDTO(
-                                reader.GetInt32(reader.GetOrdinal("AttendanceID")),
-                                reader.GetInt32(reader.GetOrdinal("EmployeeID")),
-                                reader.GetString(reader.GetOrdinal("FullName")),
-                                reader.GetDateTime(reader.GetOrdinal("AttendanceDate")),
-                                reader.GetTimeSpan(reader.GetOrdinal("CheckIn")),
+                            attendanceList.Add(new AttendanceDTO
+                            {
+                                AttendanceID = reader.GetInt32(reader.GetOrdinal("AttendanceID")),
+                                EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),
+                                FullName = reader.GetString(reader.GetOrdinal("FullName")),
+                                AttendanceDate = reader.GetDateTime(reader.GetOrdinal("AttendanceDate")),
+                                CheckIn = reader.GetTimeSpan(reader.GetOrdinal("CheckIn")),
 
-                                reader.IsDBNull(reader.GetOrdinal("CheckOut"))
+                                CheckOut = reader.IsDBNull(reader.GetOrdinal("CheckOut"))
                                     ? null
                                     : reader.GetTimeSpan(reader.GetOrdinal("CheckOut")),
 
-                                reader.IsDBNull(reader.GetOrdinal("Notes"))
+                                Notes = reader.IsDBNull(reader.GetOrdinal("Notes"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("Notes"))
-                            ));
+                            });
                         }
                     }
                 }
@@ -76,21 +77,21 @@ namespace DataAccess.Data
                     {
                         if (reader.Read())
                         {
-                            return new AttendanceDTO(
-                                reader.GetInt32(reader.GetOrdinal("AttendanceID")),
-                                reader.GetInt32(reader.GetOrdinal("EmployeeID")),
-                                reader.GetString(reader.GetOrdinal("FullName")),
-                                reader.GetDateTime(reader.GetOrdinal("AttendanceDate")),
-                                reader.GetTimeSpan(reader.GetOrdinal("CheckIn")),
+                            return new AttendanceDTO {
+                                 AttendanceID = reader.GetInt32(reader.GetOrdinal("AttendanceID")),
+                                 EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),
+                                 FullName = reader.GetString(reader.GetOrdinal("FullName")),
+                                 AttendanceDate = reader.GetDateTime(reader.GetOrdinal("AttendanceDate")),
+                                 CheckIn = reader.GetTimeSpan(reader.GetOrdinal("CheckIn")),
 
-                                reader.IsDBNull(reader.GetOrdinal("CheckOut"))
+                                 CheckOut = reader.IsDBNull(reader.GetOrdinal("CheckOut"))
                                     ? null
                                     : reader.GetTimeSpan(reader.GetOrdinal("CheckOut")),
 
-                                reader.IsDBNull(reader.GetOrdinal("Notes"))
+                                 Notes = reader.IsDBNull(reader.GetOrdinal("Notes"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("Notes"))
-                            );
+                            };
                         }
                     }
                 }
@@ -125,21 +126,22 @@ namespace DataAccess.Data
                     {
                         while (reader.Read())
                         {
-                            attendanceList.Add(new AttendanceDTO(
-                                reader.GetInt32(reader.GetOrdinal("AttendanceID")),
-                                reader.GetInt32(reader.GetOrdinal("EmployeeID")),
-                                reader.GetString(reader.GetOrdinal("FullName")),
-                                reader.GetDateTime(reader.GetOrdinal("AttendanceDate")),
-                                reader.GetTimeSpan(reader.GetOrdinal("CheckIn")),
+                            attendanceList.Add(new AttendanceDTO
+                            {
+                                AttendanceID = reader.GetInt32(reader.GetOrdinal("AttendanceID")),
+                                EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),
+                                FullName = reader.GetString(reader.GetOrdinal("FullName")),
+                                AttendanceDate = reader.GetDateTime(reader.GetOrdinal("AttendanceDate")),
+                                CheckIn = reader.GetTimeSpan(reader.GetOrdinal("CheckIn")),
 
-                                reader.IsDBNull(reader.GetOrdinal("CheckOut"))
+                                CheckOut = reader.IsDBNull(reader.GetOrdinal("CheckOut"))
                                     ? null
                                     : reader.GetTimeSpan(reader.GetOrdinal("CheckOut")),
 
-                                reader.IsDBNull(reader.GetOrdinal("Notes"))
+                                Notes = reader.IsDBNull(reader.GetOrdinal("Notes"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("Notes"))
-                            ));
+                            });
                         }
                     }
                 }

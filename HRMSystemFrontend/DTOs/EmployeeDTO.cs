@@ -8,27 +8,6 @@ namespace HRMSystemFrontend.DTOs
 {
     public class EmployeeDTO
     {
-        public EmployeeDTO(
-            int employeeID,
-            string employeeCode,
-            string fullName,
-            string? phone,
-            int departmentID,
-            string departmentName,
-            string? jobTitle,
-            bool isActive,
-            DateTime createdAt)
-        {
-            EmployeeID = employeeID;
-            EmployeeCode = employeeCode;
-            FullName = fullName;
-            Phone = phone;
-            DepartmentID = departmentID;
-            DepartmentName = departmentName;
-            JobTitle = jobTitle;
-            IsActive = isActive;
-            CreatedAt = createdAt;
-        }
 
         public int EmployeeID { get; set; }
         public string EmployeeCode { get; set; }

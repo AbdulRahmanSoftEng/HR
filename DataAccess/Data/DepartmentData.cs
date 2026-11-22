@@ -29,15 +29,16 @@ namespace DataAccess.Data
                     {
                         while (reader.Read())
                         {
-                            departmentsList.Add(new DepartmentDTO(
-                                reader.GetInt32(reader.GetOrdinal("DepartmentID")),
-                                reader.GetString(reader.GetOrdinal("DepartmentName")),
-                                reader.IsDBNull(reader.GetOrdinal("Description"))
+                            departmentsList.Add(new DepartmentDTO
+                            {
+                                DepartmentID = reader.GetInt32(reader.GetOrdinal("DepartmentID")),
+                                DepartmentName = reader.GetString(reader.GetOrdinal("DepartmentName")),
+                                Description = reader.IsDBNull(reader.GetOrdinal("Description"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("Description")),
-                                reader.GetBoolean(reader.GetOrdinal("IsActive")),
-                                reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
-                            ));
+                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
+                            });
                         }
                     }
                 }
@@ -70,15 +71,16 @@ namespace DataAccess.Data
                     {
                         if (reader.Read())
                         {
-                            return new DepartmentDTO(
-                                reader.GetInt32(reader.GetOrdinal("DepartmentID")),
-                                reader.GetString(reader.GetOrdinal("DepartmentName")),
-                                reader.IsDBNull(reader.GetOrdinal("Description"))
+                            return new DepartmentDTO
+                            {
+                                DepartmentID = reader.GetInt32(reader.GetOrdinal("DepartmentID")),
+                                DepartmentName = reader.GetString(reader.GetOrdinal("DepartmentName")),
+                                Description = reader.IsDBNull(reader.GetOrdinal("Description"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("Description")),
-                                reader.GetBoolean(reader.GetOrdinal("IsActive")),
-                                reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
-                            );
+                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
+                            };
                         }
                     }
                 }

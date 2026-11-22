@@ -29,13 +29,14 @@ namespace DataAccess.Data
                     {
                         while (reader.Read())
                         {
-                            permissionsList.Add(new PermissionDTO(
-                                reader.GetInt32(reader.GetOrdinal("PermissionID")),
-                                reader.GetString(reader.GetOrdinal("PermissionName")),
-                                reader.IsDBNull(reader.GetOrdinal("Description"))
+                            permissionsList.Add(new PermissionDTO
+                            {
+                                PermissionID = reader.GetInt32(reader.GetOrdinal("PermissionID")),
+                                PermissionName = reader.GetString(reader.GetOrdinal("PermissionName")),
+                                Description = reader.IsDBNull(reader.GetOrdinal("Description"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("Description"))
-                            ));
+                            });
                         }
                     }
                 }
@@ -68,13 +69,14 @@ namespace DataAccess.Data
                     {
                         if (reader.Read())
                         {
-                            return new PermissionDTO(
-                                reader.GetInt32(reader.GetOrdinal("PermissionID")),
-                                reader.GetString(reader.GetOrdinal("PermissionName")),
-                                reader.IsDBNull(reader.GetOrdinal("Description"))
+                            return new PermissionDTO
+                            {
+                                PermissionID = reader.GetInt32(reader.GetOrdinal("PermissionID")),
+                                PermissionName = reader.GetString(reader.GetOrdinal("PermissionName")),
+                                Description = reader.IsDBNull(reader.GetOrdinal("Description"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("Description"))
-                            );
+                            };
                         }
                     }
                 }

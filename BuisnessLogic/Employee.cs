@@ -19,29 +19,30 @@ namespace BuisnessLogic
         {
             get
             {
-                return new EmployeeDTO(
-                    EmployeeID,
-                    EmployeeCode,
-                    FullName,
-                    Phone,
-                    DepartmentID,
-                    DepartmentName,
-                    JobTitle,
-                    IsActive,
-                    CreatedAt
-                );
+                return new EmployeeDTO
+                {
+                    EmployeeID = this.EmployeeID,
+                    EmployeeCode = this.EmployeeCode,
+                    FullName = this.FullName,
+                    Phone = this.Phone,
+                    DepartmentID = this.DepartmentID,
+                    DepartmentName = this.DepartmentName,
+                    JobTitle = this.JobTitle,
+                    IsActive = this.IsActive,
+                    CreatedAt = this.CreatedAt
+                };
             }
         }
 
-        public int EmployeeID { get; set; }
+        public int? EmployeeID { get; set; }
         public string EmployeeCode { get; set; }
         public string FullName { get; set; }
         public string? Phone { get; set; }
         public int DepartmentID { get; set; }
         public string? DepartmentName { get; set; }
         public string? JobTitle { get; set; }
-        public bool IsActive { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public bool? IsActive { get; set; }
+        public DateTime? CreatedAt { get; set; }
 
         public Employee(EmployeeDTO EDTO, enMode cMode = enMode.AddNew)
         {

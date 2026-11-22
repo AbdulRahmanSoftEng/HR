@@ -117,3 +117,12 @@ D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\bin\Debug\net8.0\DataAccess.pdb
 D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\bin\Debug\net8.0\DataAccess.dll.config
 D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\obj\Debug\net8.0\HRMSystem.sourcelink.json
 D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\bin\Debug\net8.0\BCrypt-Net-Next.dll
+D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\bin\Debug\net8.0\HRMSystem.staticwebassets.runtime.json
+D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\bin\Debug\net8.0\HRMSystem.runtimeconfig.dev.json
+D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\obj\Debug\net8.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.lib.module.js
+D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\obj\Debug\net8.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.js
+D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\obj\Debug\net8.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.Config.js
+D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\obj\Debug\net8.0\HotReload\browser-tools-key.public.json
+D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\obj\Debug\net8.0\HotReload\browser-tools-key.private.json
+D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\obj\Debug\net8.0\jsmodules\jsmodules.build.manifest.json
+D:\AllProjects\RoadMapWeb\Projects\HR\HRMSystem\obj\Debug\net8.0\scopedcss\scopedcss.cache

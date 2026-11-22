@@ -27,13 +27,14 @@ namespace BuisnessLogic
         {
             get
             {
-                return new DepartmentDTO(
-                    this.DepartmentID,
-                    this.DepartmentName,
-                    this.Description,
-                    this.IsActive,
-                    this.CreatedAt
-                );
+                return new DepartmentDTO
+                {
+                    DepartmentID = this.DepartmentID,
+                    DepartmentName = this.DepartmentName,
+                    Description = this.Description,
+                    IsActive = this.IsActive,
+                    CreatedAt = this.CreatedAt
+                };
             }
         }
 
@@ -42,15 +43,15 @@ namespace BuisnessLogic
         // Properties
         // =========================================
 
-        public int DepartmentID { get; set; }
+        public int? DepartmentID { get; set; }
 
         public string DepartmentName { get; set; }
 
-        public string? Description { get; set; }
+        public string Description { get; set; }
 
         public bool IsActive { get; set; }
 
-        public DateTime CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
 
 
         // =========================================

@@ -6,7 +6,7 @@ using System.Xml.Linq;
 
 namespace HRMSystem.Controllers
 {
-    [Route("api/Permission")]
+    [Route("api/Permissions")]
     [ApiController]
     public class PermissionController : ControllerBase
     {

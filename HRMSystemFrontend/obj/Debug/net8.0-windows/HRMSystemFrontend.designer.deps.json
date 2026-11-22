@@ -10,7 +10,8 @@
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.26.52348"
+            "fileVersion": "11.0.26.52348",
+            "localPath": "Microsoft.Bcl.AsyncInterfaces.dll"
           }
         }
       },
@@ -22,7 +23,8 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.26.52348"
+            "fileVersion": "11.0.26.52348",
+            "localPath": "Microsoft.Extensions.Configuration.dll"
           }
         }
       },
@@ -33,7 +35,8 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.26.52348"
+            "fileVersion": "11.0.26.52348",
+            "localPath": "Microsoft.Extensions.Configuration.Abstractions.dll"
           }
         }
       },
@@ -48,7 +51,8 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.26.52348"
+            "fileVersion": "11.0.26.52348",
+            "localPath": "Microsoft.Extensions.Configuration.FileExtensions.dll"
           }
         }
       },
@@ -63,7 +67,8 @@
         "runtime": {
           "lib/netstandard2.1/Microsoft.Extensions.Configuration.Json.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.26.52348"
+            "fileVersion": "11.0.26.52348",
+            "localPath": "Microsoft.Extensions.Configuration.Json.dll"
           }
         }
       },
@@ -74,7 +79,8 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.26.52348"
+            "fileVersion": "11.0.26.52348",
+            "localPath": "Microsoft.Extensions.FileProviders.Abstractions.dll"
           }
         }
       },
@@ -87,7 +93,8 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.26.52348"
+            "fileVersion": "11.0.26.52348",
+            "localPath": "Microsoft.Extensions.FileProviders.Physical.dll"
           }
         }
       },
@@ -95,7 +102,8 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.26.52348"
+            "fileVersion": "11.0.26.52348",
+            "localPath": "Microsoft.Extensions.FileSystemGlobbing.dll"
           }
         }
       },
@@ -103,7 +111,8 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.26.52348"
+            "fileVersion": "11.0.26.52348",
+            "localPath": "Microsoft.Extensions.Primitives.dll"
           }
         }
       },
@@ -111,7 +120,8 @@
         "runtime": {
           "lib/netstandard2.0/System.IO.Pipelines.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.26.52348"
+            "fileVersion": "11.0.26.52348",
+            "localPath": "System.IO.Pipelines.dll"
           }
         }
       },
@@ -119,7 +129,8 @@
         "runtime": {
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.26.52348"
+            "fileVersion": "11.0.26.52348",
+            "localPath": "System.Text.Encodings.Web.dll"
           }
         }
       },
@@ -132,7 +143,8 @@
         "runtime": {
           "lib/netstandard2.0/System.Text.Json.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.26.52348"
+            "fileVersion": "11.0.26.52348",
+            "localPath": "System.Text.Json.dll"
           }
         }
       }

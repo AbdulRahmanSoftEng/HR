@@ -1,10 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="forms\Attendances\frmAttendanceManagements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Commons\frmHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Commons\frmSharedOutLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Commons\Msg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Dashbord\frmDashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Departments\frmDepartmentManagements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Employees\frmEmployeeManagements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\frmIntro.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Permissions\frmPermissionManangements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Roles\frmRoleManagements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Users\frmAddEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Users\frmUserManagements.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

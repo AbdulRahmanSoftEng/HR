@@ -20,11 +20,12 @@ namespace BuisnessLogic
         {
             get
             {
-                return new PermissionDTO(
-                    PermissionID,
-                    PermissionName,
-                    Description
-                );
+                return new PermissionDTO
+                {
+                    PermissionID = PermissionID,
+                    PermissionName = PermissionName,
+                    Description = Description
+                };
             }
         }
 

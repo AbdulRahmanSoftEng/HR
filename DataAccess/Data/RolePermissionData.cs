@@ -32,18 +32,19 @@ namespace DataAccess.Data
                     {
                         while (reader.Read())
                         {
-                            permissionsList.Add(new RolePermissionDTO(
-                                reader.GetInt32(reader.GetOrdinal("RoleID")),
-                                reader.GetString(reader.GetOrdinal("RoleName")),
-                                reader.GetInt32(reader.GetOrdinal("PermissionID")),
-                                reader.GetString(reader.GetOrdinal("PermissionName")),
+                            permissionsList.Add(new RolePermissionDTO
+                            {
+                                RoleID = reader.GetInt32(reader.GetOrdinal("RoleID")),
+                                RoleName = reader.GetString(reader.GetOrdinal("RoleName")),
+                                PermissionID = reader.GetInt32(reader.GetOrdinal("PermissionID")),
+                                PermissionName = reader.GetString(reader.GetOrdinal("PermissionName")),
 
-                                reader.IsDBNull(reader.GetOrdinal("Description"))
+                                Description = reader.IsDBNull(reader.GetOrdinal("Description"))
                                     ? null
                                     : reader.GetString(reader.GetOrdinal("Description")),
 
-                                reader.GetDateTime(reader.GetOrdinal("AssignedAt"))
-                            ));
+                                AssignedAt = reader.GetDateTime(reader.GetOrdinal("AssignedAt"))
+                            });
                         }
                     }
                 }

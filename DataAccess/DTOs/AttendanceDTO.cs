@@ -8,38 +8,6 @@ namespace DataAccess.DTOs
 {
     public class AttendanceDTO
     {
-        public AttendanceDTO() { }
-
-        public AttendanceDTO(
-           int attendanceID,
-           int employeeID,
-           string fullName,
-           TimeSpan checkIn,
-           TimeSpan? checkOut)
-        {
-            this.AttendanceID = attendanceID;
-            this.EmployeeID = employeeID;
-            this.FullName = fullName;
-            this.CheckIn = checkIn;
-            this.CheckOut = checkOut;
-        }
-        public AttendanceDTO(
-            int attendanceID,
-            int employeeID,
-            string fullName,
-            DateTime attendanceDate,
-            TimeSpan checkIn,
-            TimeSpan? checkOut,
-            string? notes)
-        {
-            this.AttendanceID = attendanceID;
-            this.EmployeeID = employeeID;
-            this.FullName = fullName;
-            this.AttendanceDate = attendanceDate;
-            this.CheckIn = checkIn;
-            this.CheckOut = checkOut;
-            this.Notes = notes;
-        }
 
         public int AttendanceID { get; set; }
 

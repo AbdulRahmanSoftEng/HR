@@ -20,12 +20,13 @@ namespace BuisnessLogic
         {
             get
             {
-                return new RoleDTO(
-                    RoleID,
-                    RoleName,
-                    Description,
-                    CreatedAt
-                );
+                return new RoleDTO
+                {
+                    RoleID = RoleID,
+                    RoleName = RoleName,
+                    Description = Description,
+                    CreatedAt = CreatedAt
+                };
             }
         }
 

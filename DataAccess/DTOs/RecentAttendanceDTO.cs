@@ -9,19 +9,7 @@ namespace DataAccess.DTOs
     public class RecentAttendanceDTO
     {
 
-        public RecentAttendanceDTO(
-        int attendanceID,
-        string fullName,
-        string departmentName,
-        TimeSpan checkIn,
-        TimeSpan? checkOut)
-        {
-            this.AttendanceID = attendanceID;
-            this.FullName = fullName;
-            this.DepartmentName = departmentName;
-            this.CheckIn = checkIn;
-            this.CheckOut = checkOut;
-        }
+       
 
         public int AttendanceID { get; set; }
 

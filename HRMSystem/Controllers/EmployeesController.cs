@@ -39,8 +39,7 @@ namespace HRMSystem.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ActionResult<EmployeeDTO> AddNewEmployee(EmployeeDTO newEmployee)
         {
-            if (newEmployee == null ||
-                string.IsNullOrWhiteSpace(newEmployee.EmployeeCode) ||
+            if (string.IsNullOrWhiteSpace(newEmployee.EmployeeCode) ||
                 string.IsNullOrWhiteSpace(newEmployee.FullName) ||
                 newEmployee.DepartmentID <= 0)
             {
