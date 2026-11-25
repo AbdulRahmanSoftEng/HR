@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 
 using DataAccess.Data;
-using DataAccess.DTOs;
+using DataAccess.DTOs.Permission;
 
 namespace BuisnessLogic
 {
@@ -58,6 +58,11 @@ namespace BuisnessLogic
         public static List<PermissionDTO> GetAllPermissions()
         {
             return PermissionData.GetAllPermissions();
+        }
+
+        public static List<PermissionDTO> GetUserPermissionsByUserID(int userId)
+        {
+            return PermissionData.GetUserPermissionsByUserID(userId);
         }
 
         public static Permission? FindByID(int permissionID)

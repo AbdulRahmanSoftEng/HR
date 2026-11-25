@@ -4,13 +4,16 @@
     <Compile Update="forms\Attendances\frmAttendanceManagements.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="forms\Commons\frmHeader.cs">
+    <Compile Update="forms\Attendances\UserControls\ctrlTodayAttendanceStatistices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="forms\Commons\Forms\frmHeader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="forms\Commons\frmSharedOutLine.cs">
+    <Compile Update="forms\Commons\Forms\frmSharedOutLine.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="forms\Commons\Msg.cs">
+    <Compile Update="forms\Commons\Forms\Msg.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="forms\Dashbord\frmDashbord.cs">
@@ -20,6 +23,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="forms\Employees\frmEmployeeManagements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Employees\frmShowEmployeeInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="forms\frmIntro.cs">
@@ -34,14 +40,32 @@
     <Compile Update="forms\Permissions\frmPermissionManangements.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="forms\Permissions\frmShowPermissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="forms\Roles\frmRoleManagements.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="forms\Users\frmAddEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="forms\Users\frmShowUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="forms\Users\frmUserManagements.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="forms\Dashbord\UserControls\ctrlDashbordStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="forms\Employees\UserControls\ctrlEmployeeInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="forms\Commons\UserControls\ctrlOutline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="forms\Users\UserControls\ctrlUserInfo.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

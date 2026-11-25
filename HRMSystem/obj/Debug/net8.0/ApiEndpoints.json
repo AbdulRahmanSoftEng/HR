@@ -2,14 +2,14 @@
   {
     "ContainingType": "HRMSystem.Controllers.AttendanceController",
     "Method": "GetAllAttendance",
-    "RelativePath": "api/Attendance/All",
+    "RelativePath": "api/Attendances/All",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.AttendanceDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.Attendance.AttendanceDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,7 +28,7 @@
   {
     "ContainingType": "HRMSystem.Controllers.AttendanceController",
     "Method": "FindById",
-    "RelativePath": "api/Attendance/ById/{attendanceID}",
+    "RelativePath": "api/Attendances/ById/{attendanceID}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -41,7 +41,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.AttendanceDTO",
+        "Type": "DataAccess.DTOs.Attendance.AttendanceDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -78,7 +78,7 @@
   {
     "ContainingType": "HRMSystem.Controllers.AttendanceController",
     "Method": "CheckInAttencance",
-    "RelativePath": "api/Attendance/CheckIn",
+    "RelativePath": "api/Attendances/CheckIn",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -96,7 +96,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.AttendanceDTO",
+        "Type": "DataAccess.DTOs.Attendance.AttendanceDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -124,7 +124,7 @@
   {
     "ContainingType": "HRMSystem.Controllers.AttendanceController",
     "Method": "CheckOutAttencance",
-    "RelativePath": "api/Attendance/CheckOut",
+    "RelativePath": "api/Attendances/CheckOut",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -137,7 +137,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.AttendanceDTO",
+        "Type": "DataAccess.DTOs.Attendance.AttendanceDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -164,8 +164,71 @@
   },
   {
     "ContainingType": "HRMSystem.Controllers.AttendanceController",
+    "Method": "GetEmployeesForAttendance",
+    "RelativePath": "api/Attendances/EmpForAtt",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.Attendance.EmployeeForAttendanceDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ],
+    "EndpointName": "GetEmployeesForAttendance"
+  },
+  {
+    "ContainingType": "HRMSystem.Controllers.AttendanceController",
+    "Method": "GetTodayAttendanceRecords",
+    "RelativePath": "api/Attendances/Pagination",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PagePerNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ],
+    "EndpointName": "GetTodayAttendanceRecords"
+  },
+  {
+    "ContainingType": "HRMSystem.Controllers.AttendanceController",
     "Method": "SearchAllAttendanceByEmpId",
-    "RelativePath": "api/Attendance/SearchByEmpId/{employeeId}",
+    "RelativePath": "api/Attendances/SearchByEmpId/{employeeId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -178,7 +241,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.EmployeeDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.Employee.EmployeeDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -213,6 +276,32 @@
     "EndpointName": "SearchAllAttendanceByEmpId"
   },
   {
+    "ContainingType": "HRMSystem.Controllers.AttendanceController",
+    "Method": "GetTodayAttendanceStatistics",
+    "RelativePath": "api/Attendances/Statistics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "DataAccess.DTOs.Dashbord.DashboardDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ],
+    "EndpointName": "GetTodayAttendanceStatistics"
+  },
+  {
     "ContainingType": "HRMSystem.Controllers.DashboardController",
     "Method": "GetRecentAttendances",
     "RelativePath": "api/Dashboard/RecentAttendances",
@@ -222,7 +311,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.RecentAttendanceDTO",
+        "Type": "DataAccess.DTOs.Dashbord.RecentAttendanceDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -248,7 +337,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.DashboardDTO",
+        "Type": "DataAccess.DTOs.Dashbord.DashboardDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -274,13 +363,13 @@
     "Parameters": [
       {
         "Name": "newDepartment",
-        "Type": "DataAccess.DTOs.DepartmentDTO",
+        "Type": "DataAccess.DTOs.Department.DepartmentDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.DepartmentDTO",
+        "Type": "DataAccess.DTOs.Department.DepartmentDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -315,7 +404,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.DepartmentDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.Department.DepartmentDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -356,7 +445,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.DepartmentDTO",
+        "Type": "DataAccess.DTOs.Department.DepartmentDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -445,13 +534,13 @@
       },
       {
         "Name": "updateDepartment",
-        "Type": "DataAccess.DTOs.DepartmentDTO",
+        "Type": "DataAccess.DTOs.Department.DepartmentDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.DepartmentDTO",
+        "Type": "DataAccess.DTOs.Department.DepartmentDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -550,13 +639,13 @@
     "Parameters": [
       {
         "Name": "newEmployee",
-        "Type": "DataAccess.DTOs.EmployeeDTO",
+        "Type": "DataAccess.DTOs.Employee.EmployeeDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.EmployeeDTO",
+        "Type": "DataAccess.DTOs.Employee.EmployeeDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -591,7 +680,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[DataAccess.DTOs.EmployeeDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DataAccess.DTOs.Employee.EmployeeDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -623,7 +712,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.EmployeeDTO",
+        "Type": "DataAccess.DTOs.Employee.EmployeeDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -672,13 +761,13 @@
       },
       {
         "Name": "updateEmployee",
-        "Type": "DataAccess.DTOs.EmployeeDTO",
+        "Type": "DataAccess.DTOs.Employee.EmployeeDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.EmployeeDTO",
+        "Type": "DataAccess.DTOs.Employee.EmployeeDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -722,13 +811,13 @@
     "Parameters": [
       {
         "Name": "newPermission",
-        "Type": "DataAccess.DTOs.PermissionDTO",
+        "Type": "DataAccess.DTOs.Permission.PermissionDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.PermissionDTO",
+        "Type": "DataAccess.DTOs.Permission.PermissionDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -763,7 +852,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.PermissionDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.Permission.PermissionDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -781,6 +870,38 @@
   },
   {
     "ContainingType": "HRMSystem.Controllers.PermissionController",
+    "Method": "GetUserPermissionsByUserID",
+    "RelativePath": "api/Permissions/ByUserId/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.Permission.PermissionDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ],
+    "EndpointName": "GetUserPermissionByUserID"
+  },
+  {
+    "ContainingType": "HRMSystem.Controllers.PermissionController",
     "Method": "FindByPermissionID",
     "RelativePath": "api/Permissions/Find/{permissionID}",
     "HttpMethod": "GET",
@@ -795,7 +916,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.UserDTO",
+        "Type": "DataAccess.DTOs.User.UserDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -844,13 +965,13 @@
       },
       {
         "Name": "updatePermission",
-        "Type": "DataAccess.DTOs.PermissionDTO",
+        "Type": "DataAccess.DTOs.Permission.PermissionDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.PermissionDTO",
+        "Type": "DataAccess.DTOs.Permission.PermissionDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -885,13 +1006,13 @@
     "Parameters": [
       {
         "Name": "newRole",
-        "Type": "DataAccess.DTOs.RoleDTO",
+        "Type": "DataAccess.DTOs.Role.RoleDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.RoleDTO",
+        "Type": "DataAccess.DTOs.Role.RoleDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -926,7 +1047,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.RoleDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.Role.RoleDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -958,7 +1079,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.UserDTO",
+        "Type": "DataAccess.DTOs.User.UserDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1007,13 +1128,13 @@
       },
       {
         "Name": "updateRole",
-        "Type": "DataAccess.DTOs.RoleDTO",
+        "Type": "DataAccess.DTOs.Role.RoleDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.RoleDTO",
+        "Type": "DataAccess.DTOs.Role.RoleDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1096,7 +1217,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.RolePermissionDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.Role.RolePermissionDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1170,7 +1291,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.FullUserDTO",
+        "Type": "DataAccess.DTOs.User.FullUserDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1214,13 +1335,13 @@
     "Parameters": [
       {
         "Name": "newUser",
-        "Type": "DataAccess.DTOs.UserDTO",
+        "Type": "DataAccess.DTOs.User.UserDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.FullUserDTO",
+        "Type": "DataAccess.DTOs.User.FullUserDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1255,7 +1376,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.FullUserDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[DataAccess.DTOs.User.FullUserDTO, DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1270,6 +1391,56 @@
       }
     ],
     "EndpointName": "GetAllUser"
+  },
+  {
+    "ContainingType": "HRMSystem.Controllers.UserController",
+    "Method": "FindByEmpID",
+    "RelativePath": "api/Users/ByEmpID/{empId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DataAccess.DTOs.User.FullUserDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ],
+    "EndpointName": "FindByEmpID"
   },
   {
     "ContainingType": "HRMSystem.Controllers.UserController",
@@ -1292,7 +1463,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.FullUserDTO",
+        "Type": "DataAccess.DTOs.User.FullUserDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1356,7 +1527,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "DataAccess.DTOs.UserDTO",
+        "Type": "DataAccess.DTOs.User.UserDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",

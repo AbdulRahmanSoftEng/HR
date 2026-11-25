@@ -1,7 +1,8 @@
-﻿using DataAccess.DTOs;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using System.Data;
 using DataAccess.Settings;
+using DataAccess.DTOs.Attendance;
+using DataAccess.DTOs.Dashbord;
 
 namespace DataAccess.Data
 {
@@ -51,6 +52,99 @@ namespace DataAccess.Data
             }
 
             return attendanceList;
+        }
+
+
+        // =========================================
+        // 1. Get All Attendance tody
+        // =========================================
+
+        public static List<TodayAttendanceRecords> GetTodayAttendanceRecords(TodayAttendanceRecordPagination pagination)
+        {
+            var todayAttendanceRecords = new List<TodayAttendanceRecords>();
+
+            using (SqlConnection connection =
+                   new SqlConnection(DbSettings.connection))
+            {
+                using (SqlCommand command =
+                       new SqlCommand("SP_GetTodayAttendanceRecords", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.Add("@PageNumber", SqlDbType.Int)
+                        .Value = pagination.PageNumber;
+
+                    command.Parameters.Add("@PagePerNumber", SqlDbType.Int)
+                        .Value = pagination.PagePerNumber;
+                        
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            todayAttendanceRecords.Add(new TodayAttendanceRecords
+                            {
+                                AttendanceID = reader.IsDBNull(reader.GetOrdinal("AttendanceID"))
+                                    ? null
+                                    : reader.GetInt32(reader.GetOrdinal("AttendanceID")),
+
+                                EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),
+                                FullName = reader.GetString(reader.GetOrdinal("FullName")),
+                                DepartmentName = reader.GetString(reader.GetOrdinal("DepartmentName")),
+
+                                CheckIn = reader.IsDBNull(reader.GetOrdinal("CheckIn"))
+                                    ? null
+                                    : reader.GetTimeSpan(reader.GetOrdinal("CheckIn")),
+
+                                CheckOut = reader.IsDBNull(reader.GetOrdinal("CheckOut"))
+                                    ? null
+                                    : reader.GetTimeSpan(reader.GetOrdinal("CheckOut")),
+
+                                Status = reader.GetString(reader.GetOrdinal("Status"))
+                            });
+                        }
+                    }
+                }
+            }
+
+            return todayAttendanceRecords;
+        }
+
+
+        // =========================================
+        // 1. Get All Employees FOr Attendance
+        // =========================================
+
+        public static List<EmployeeForAttendanceDTO> GetEmployeesForAttendance()
+        {
+            var employeeForAttendances = new List<EmployeeForAttendanceDTO>();
+
+            using (SqlConnection connection =
+                   new SqlConnection(DbSettings.connection))
+            {
+                using (SqlCommand command =
+                       new SqlCommand("SP_GetEmployeesForAttendance", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            employeeForAttendances.Add(new EmployeeForAttendanceDTO
+                            {
+                                EmployeeID = reader.GetInt32(reader.GetOrdinal("EmployeeID")),
+                                Name = reader.GetString(reader.GetOrdinal("Name"))
+                            });
+                        }
+                    }
+                }
+            }
+
+            return employeeForAttendances;
         }
 
 
@@ -213,6 +307,46 @@ namespace DataAccess.Data
                     return rowsAffected == 1;
                 }
             }
+        }
+
+        // =========================================
+        // 1. this is funcation retreving data of card in screen attendances:
+        // Today Attendance Statistics 
+        // =========================================
+
+        public static TodayAttendanceStatisticsDTO GetTodayAttendanceStatistics()
+        {
+            using (SqlConnection connection =
+                   new SqlConnection(DbSettings.connection))
+            {
+                using (SqlCommand command =
+                       new SqlCommand("SP_GetTodayAttendanceStatistics", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new TodayAttendanceStatisticsDTO
+                            {
+                                TotalEmployees = reader.GetInt32(reader.GetOrdinal("TotalEmployees")),
+                                PresentToday = reader.GetInt32(reader.GetOrdinal("PresentToday")),
+                                AbsentToday = reader.GetInt32(reader.GetOrdinal("AbsentToday")),
+                            };
+                        }
+                    }
+                }
+            }
+
+            return new TodayAttendanceStatisticsDTO
+            {
+                TotalEmployees = 0,
+                PresentToday = 0,
+                AbsentToday = 0
+            };
         }
     }
 }

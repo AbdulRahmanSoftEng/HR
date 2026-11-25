@@ -1,5 +1,6 @@
 ﻿using BuisnessLogic;
-using DataAccess.DTOs;
+using DataAccess.DTOs.Role;
+using DataAccess.DTOs.User;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using BuisnessLogic;
-using DataAccess.DTOs;
 using Microsoft.AspNetCore.Http.HttpResults;
+using DataAccess.DTOs.Department;
 namespace HRMSystem.Controllers
 {
     //[Route("api/[controller]")]

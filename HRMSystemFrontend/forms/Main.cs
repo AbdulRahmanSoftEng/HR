@@ -39,7 +39,12 @@ namespace HRMSystemFrontend.forms
         {
             _CloseAllChildeForm();
 
-            frmIntro frm = new frmIntro(Title, Description);
+            //frmIntro frm = new frmIntro(Title, Description);
+            //frm.MdiParent = this;
+            //frm.Dock = DockStyle.Fill;
+            //frm.Show();
+
+            frmDashbord frm = new frmDashbord("Manage Dashboard", "manage dashboard and analytics");
             frm.MdiParent = this;
             frm.Dock = DockStyle.Fill;
             frm.Show();

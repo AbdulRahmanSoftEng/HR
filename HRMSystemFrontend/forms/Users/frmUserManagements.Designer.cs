@@ -30,10 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             dgvUsers = new DataGridView();
-            lblCount = new Label();
-            textBox1 = new TextBox();
-            btnAddNew = new Button();
-            comboBox1 = new ComboBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
             showInfoToolStripMenuItem = new ToolStripMenuItem();
             updateInfoToolStripMenuItem = new ToolStripMenuItem();
@@ -41,6 +37,10 @@
             sendSMSToolStripMenuItem = new ToolStripMenuItem();
             sennEMAILToolStripMenuItem = new ToolStripMenuItem();
             addUserToolStripMenuItem = new ToolStripMenuItem();
+            lblCount = new Label();
+            textBox1 = new TextBox();
+            btnAddNew = new Button();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvUsers).BeginInit();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
@@ -58,6 +58,53 @@
             dgvUsers.RowHeadersWidth = 51;
             dgvUsers.Size = new Size(1480, 400);
             dgvUsers.TabIndex = 2;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { showInfoToolStripMenuItem, updateInfoToolStripMenuItem, deleteUserToolStripMenuItem, sendSMSToolStripMenuItem, sennEMAILToolStripMenuItem, addUserToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.RightToLeft = RightToLeft.Yes;
+            contextMenuStrip1.Size = new Size(211, 176);
+            // 
+            // showInfoToolStripMenuItem
+            // 
+            showInfoToolStripMenuItem.Name = "showInfoToolStripMenuItem";
+            showInfoToolStripMenuItem.Size = new Size(210, 24);
+            showInfoToolStripMenuItem.Text = "Show User Info";
+            showInfoToolStripMenuItem.Click += showInfoToolStripMenuItem_Click;
+            // 
+            // updateInfoToolStripMenuItem
+            // 
+            updateInfoToolStripMenuItem.Name = "updateInfoToolStripMenuItem";
+            updateInfoToolStripMenuItem.Size = new Size(210, 24);
+            updateInfoToolStripMenuItem.Text = "Update User";
+            updateInfoToolStripMenuItem.Click += updateInfoToolStripMenuItem_Click;
+            // 
+            // deleteUserToolStripMenuItem
+            // 
+            deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
+            deleteUserToolStripMenuItem.Size = new Size(210, 24);
+            deleteUserToolStripMenuItem.Text = "Delete User";
+            // 
+            // sendSMSToolStripMenuItem
+            // 
+            sendSMSToolStripMenuItem.Name = "sendSMSToolStripMenuItem";
+            sendSMSToolStripMenuItem.Size = new Size(210, 24);
+            sendSMSToolStripMenuItem.Text = "Send SMS";
+            // 
+            // sennEMAILToolStripMenuItem
+            // 
+            sennEMAILToolStripMenuItem.Name = "sennEMAILToolStripMenuItem";
+            sennEMAILToolStripMenuItem.Size = new Size(210, 24);
+            sennEMAILToolStripMenuItem.Text = "Senn EMAIL";
+            // 
+            // addUserToolStripMenuItem
+            // 
+            addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
+            addUserToolStripMenuItem.Size = new Size(210, 24);
+            addUserToolStripMenuItem.Text = "Add User";
+            addUserToolStripMenuItem.Click += addUserToolStripMenuItem_Click;
             // 
             // lblCount
             // 
@@ -99,52 +146,6 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(267, 28);
             comboBox1.TabIndex = 6;
-            // 
-            // contextMenuStrip1
-            // 
-            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { showInfoToolStripMenuItem, updateInfoToolStripMenuItem, deleteUserToolStripMenuItem, sendSMSToolStripMenuItem, sennEMAILToolStripMenuItem, addUserToolStripMenuItem });
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.RightToLeft = RightToLeft.Yes;
-            contextMenuStrip1.Size = new Size(211, 176);
-            // 
-            // showInfoToolStripMenuItem
-            // 
-            showInfoToolStripMenuItem.Name = "showInfoToolStripMenuItem";
-            showInfoToolStripMenuItem.Size = new Size(210, 24);
-            showInfoToolStripMenuItem.Text = "Show User Info";
-            // 
-            // updateInfoToolStripMenuItem
-            // 
-            updateInfoToolStripMenuItem.Name = "updateInfoToolStripMenuItem";
-            updateInfoToolStripMenuItem.Size = new Size(210, 24);
-            updateInfoToolStripMenuItem.Text = "Update User";
-            updateInfoToolStripMenuItem.Click += updateInfoToolStripMenuItem_Click;
-            // 
-            // deleteUserToolStripMenuItem
-            // 
-            deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            deleteUserToolStripMenuItem.Size = new Size(210, 24);
-            deleteUserToolStripMenuItem.Text = "Delete User";
-            // 
-            // sendSMSToolStripMenuItem
-            // 
-            sendSMSToolStripMenuItem.Name = "sendSMSToolStripMenuItem";
-            sendSMSToolStripMenuItem.Size = new Size(210, 24);
-            sendSMSToolStripMenuItem.Text = "Send SMS";
-            // 
-            // sennEMAILToolStripMenuItem
-            // 
-            sennEMAILToolStripMenuItem.Name = "sennEMAILToolStripMenuItem";
-            sennEMAILToolStripMenuItem.Size = new Size(210, 24);
-            sennEMAILToolStripMenuItem.Text = "Senn EMAIL";
-            // 
-            // addUserToolStripMenuItem
-            // 
-            addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            addUserToolStripMenuItem.Size = new Size(210, 24);
-            addUserToolStripMenuItem.Text = "Add User";
-            addUserToolStripMenuItem.Click += addUserToolStripMenuItem_Click;
             // 
             // frmUserManagements
             // 

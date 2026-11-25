@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using BuisnessLogic;
-using DataAccess.DTOs;
+using DataAccess.DTOs.Employee;
 
 namespace HRMSystem.Controllers
 {

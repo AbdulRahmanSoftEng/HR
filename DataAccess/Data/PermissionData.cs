@@ -1,7 +1,7 @@
-﻿using DataAccess.DTOs;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using System.Data;
 using DataAccess.Settings;
+using DataAccess.DTOs.Permission;
 
 namespace DataAccess.Data
 {
@@ -22,6 +22,48 @@ namespace DataAccess.Data
                        new SqlCommand("SP_GetAllPermissions", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
+
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            permissionsList.Add(new PermissionDTO
+                            {
+                                PermissionID = reader.GetInt32(reader.GetOrdinal("PermissionID")),
+                                PermissionName = reader.GetString(reader.GetOrdinal("PermissionName")),
+                                Description = reader.IsDBNull(reader.GetOrdinal("Description"))
+                                    ? null
+                                    : reader.GetString(reader.GetOrdinal("Description"))
+                            });
+                        }
+                    }
+                }
+            }
+
+            return permissionsList;
+        }
+
+
+        // =========================================
+        // 1. Get All Permissions
+        // =========================================
+
+        public static List<PermissionDTO> GetUserPermissionsByUserID(int userId)
+        {
+            var permissionsList = new List<PermissionDTO>();
+
+            using (SqlConnection connection =
+                   new SqlConnection(DbSettings.connection))
+            {
+                using (SqlCommand command =
+                       new SqlCommand("SP_GetUserPermissionsByUserID", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.Add("@UserID", SqlDbType.Int)
+                        .Value = userId;
 
                     connection.Open();
 

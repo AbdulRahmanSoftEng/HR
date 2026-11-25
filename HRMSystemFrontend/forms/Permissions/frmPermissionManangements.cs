@@ -35,7 +35,6 @@ namespace HRMSystemFrontend.forms.Permissions
         {
             try
             {
-                string baseUrl = ConfigurationManager.AppSettings["Url"];
                 string permissionsUrl = ConfigurationManager.AppSettings["PermissionsUrl"];
                 string requestUrl = $"{permissionsUrl.Trim('/')}/All";
 

@@ -1,7 +1,7 @@
-﻿using DataAccess.DTOs;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using System.Data;
 using DataAccess.Settings;
+using DataAccess.DTOs.Role;
 
 namespace DataAccess.Data
 {

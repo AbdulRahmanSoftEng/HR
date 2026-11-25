@@ -170,12 +170,12 @@ namespace HRMSystemFrontend.forms.Users
                     }
                 }
 
-                Msg.Show("Error Occurred");
+                Msg.Show("Error Occurred", Shared.enTypeIcon.Error);
                 return false;
             }
             catch (Exception ex)
             {
-                Msg.Show("Exception " + ex.Message);
+                Msg.Show("Exception " + ex.Message, Shared.enTypeIcon.Error);
                 return false;
             }
         }

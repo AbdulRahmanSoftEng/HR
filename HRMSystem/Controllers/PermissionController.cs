@@ -1,5 +1,6 @@
 ﻿using BuisnessLogic;
-using DataAccess.DTOs;
+using DataAccess.DTOs.Permission;
+using DataAccess.DTOs.User;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Xml.Linq;
@@ -20,6 +21,28 @@ namespace HRMSystem.Controllers
             {
 
                 List<PermissionDTO> permissions = Permission.GetAllPermissions();
+                return Ok(permissions);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(
+                        StatusCodes.Status500InternalServerError,
+                        "An unexpected error occurred."
+                    );
+            }
+        }
+
+
+        [HttpGet("ByUserId/{userId}", Name = "GetUserPermissionByUserID")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public ActionResult<List<PermissionDTO>> GetUserPermissionsByUserID(int userId)
+        {
+
+            try
+            {
+
+                List<PermissionDTO> permissions = Permission.GetUserPermissionsByUserID(userId);
                 return Ok(permissions);
             }
             catch (Exception ex)

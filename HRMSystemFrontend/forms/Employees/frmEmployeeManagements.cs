@@ -1,19 +1,20 @@
 ﻿using HRMSystemFrontend.DTOs;
 using HRMSystemFrontend.forms.Commons;
-using HRMSystemFrontend.forms.Users;
 using HRMSystemFrontend.forms.Employees;
+using HRMSystemFrontend.forms.Users;
 using HRMSystemFrontend.Settings;
-using System.Configuration;
+using HRMSystemFrontend.Shared;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net.Http.Json;
 
 namespace HRMSystemFrontend.forms.Employees
 {
@@ -37,7 +38,7 @@ namespace HRMSystemFrontend.forms.Employees
                 Msg.Show("No employees found.", Shared.enTypeIcon.Information);
                 return;
             }
-            dgvUsers.DataSource = employees;
+            dgvEmployees.DataSource = employees;
         }
 
         private void ShowCount(int count)
@@ -75,7 +76,7 @@ namespace HRMSystemFrontend.forms.Employees
         private async void Employee_Saved(object sender, EventArgs e)
         {
             // Refresh the employee list after a new employee is added
-           await GetAllEmployees();
+            await GetAllEmployees();
         }
         private void AddEmployee()
         {
@@ -93,5 +94,22 @@ namespace HRMSystemFrontend.forms.Employees
         {
             await GetAllEmployees();
         }
+
+        private async void showInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvEmployees.SelectedCells.Count > 0)
+            {
+                int employeeId = (int)dgvEmployees.CurrentRow.Cells[0].Value;
+                frmShowEmployeeInfo showInfoForm = new frmShowEmployeeInfo();
+                showInfoForm.ShowEmployeeInfo(employeeId);
+                showInfoForm.ShowDialog();
+
+            }
+            else
+            {
+                Msg.ShowDialog("قم بتحديد الموظف المراد تعديل بياناته", enTypeIcon.Information);
+            }
+        }
+
     }
 }

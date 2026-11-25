@@ -1,6 +1,6 @@
 ﻿using BuisnessLogic;
 using BuisnessLogic.Utilities;
-using DataAccess.DTOs;
+using DataAccess.DTOs.User;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 namespace HRMSystem.Controllers
@@ -18,8 +18,8 @@ namespace HRMSystem.Controllers
             
             try
             {
-                
-                List<FullUserDTO> users = clsUser.GetAllUsers();
+
+                List<FullUserDTO> users = BuisnessLogic.clsUser.GetAllUsers();
                 return Ok(users);
             }
             catch (Exception ex)
@@ -49,7 +49,7 @@ namespace HRMSystem.Controllers
 
             try
             {
-                newUser.Password = clsUser.HashPassword(newUser.Password); 
+                newUser.Password = BuisnessLogic.clsUser.HashPassword(newUser.Password); 
 
                 clsUser user = new clsUser(newUser);
                 if (!user.Save())
@@ -57,7 +57,7 @@ namespace HRMSystem.Controllers
                             StatusCodes.Status500InternalServerError,
                             "internal server error");
 
-                user = clsUser.FindById(user.UserID);
+                user = BuisnessLogic.clsUser.FindById(user.UserID);
 
                 return Ok(user.FUDTO);
             }
@@ -88,7 +88,7 @@ namespace HRMSystem.Controllers
             try
             {
 
-                clsUser user = clsUser.LoginUser(username);
+                clsUser user = BuisnessLogic.clsUser.LoginUser(username);
                 if (user == null)
                     return NotFound($"dose not exists user by Username {username}");
 
@@ -108,7 +108,7 @@ namespace HRMSystem.Controllers
             }
         }
 
-        // GET: api/User/Login
+        // GET: api/User/Find by user id
         [HttpGet("{userID}", Name = "FindByUserID")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -123,12 +123,43 @@ namespace HRMSystem.Controllers
 
             try
             {
-                clsUser? user = clsUser.FindById(userID);
+                clsUser? user = BuisnessLogic.clsUser.FindById(userID);
                 if (user == null)
                     return NotFound($"dose not exists user by id {userID}");
 
 
                 return Ok(user.FUDTO);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(
+                        StatusCodes.Status500InternalServerError,
+                        "An unexpected error occurred." + ex.Message
+                    );
+            }
+        }
+
+        // GET: api/User/Find by emp id
+        [HttpGet("ByEmpID/{empId}", Name = "FindByEmpID")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public ActionResult<FullUserDTO> FindByEmpID(int empId)
+        {
+            if (empId <= 0 )
+            {
+                return BadRequest("Data is invalid");
+            }
+
+            try
+            {
+                clsUser? user = BuisnessLogic.clsUser.FindByEmpID(empId);
+                if (user == null)
+                    return NotFound($"dose not exists user by emp id {empId}");
+
+
+                return Ok(user.URDTO);
             }
             catch (Exception ex)
             {
@@ -158,7 +189,7 @@ namespace HRMSystem.Controllers
                 if (clsUser == null)
                     return NotFound($"dose not exists user by id {userID}");
 
-                bool Result = clsUser.SetUserActiveStatus(userID, status);
+                bool Result = BuisnessLogic.clsUser.SetUserActiveStatus(userID, status);
 
                 if(!Result)
                     return StatusCode(

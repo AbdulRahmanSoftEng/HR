@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BuisnessLogic.Utilities;
 using DataAccess.Data;
-using DataAccess.DTOs;
+using DataAccess.DTOs.User;
 
 namespace BuisnessLogic
 {
@@ -18,11 +18,11 @@ namespace BuisnessLogic
         // يستخدم داخلياً عند الإضافة أو تغيير كلمة المرور.
         private string? _PasswordHash;
 
-        public UserLoginInfo LDTO
+        public UserLoginInfoDTO LDTO
         {
             get
             {
-                return new UserLoginInfo
+                return new UserLoginInfoDTO
                 { 
                     UserID = this.UserID,
                     FullName = this.FullName,
@@ -70,6 +70,22 @@ namespace BuisnessLogic
             }
         }
 
+        public UserWithRoleDTO URDTO
+        {
+            get
+            {
+                return new UserWithRoleDTO
+                {
+                    UserID = this.UserID,
+                    Username = this.Username,
+                    RoleID = this.RoleID,
+                    RoleName = this.RoleName,
+                    UserIsActive = this.IsActive,
+                    CreatedAt = this.CreatedAt
+                };
+            }
+        }
+
         public int UserID { get; set; }
         public int EmployeeID { get; set; }
         public string? EmployeeCode { get; set; }
@@ -96,6 +112,22 @@ namespace BuisnessLogic
             RoleName = FUDTO.RoleName;
             IsActive = FUDTO.IsActive;
             CreatedAt = FUDTO.CreatedAt;
+
+            _PasswordHash = passwordHash;
+            Mode = cMode;
+        }
+
+        public clsUser(
+            UserWithRoleDTO URUDTO,
+            enMode cMode = enMode.AddNew,
+            string? passwordHash = null)
+        {
+            UserID = URUDTO.UserID;
+            Username = URUDTO.Username;
+            RoleID = URUDTO.RoleID;
+            RoleName = URUDTO.RoleName;
+            IsActive = URUDTO.UserIsActive;
+            CreatedAt = URUDTO.CreatedAt;
 
             _PasswordHash = passwordHash;
             Mode = cMode;
@@ -167,6 +199,16 @@ namespace BuisnessLogic
 
             if (FUDTO != null)
                 return new clsUser(FUDTO, enMode.Update);
+
+            return null;
+        }
+
+        public static clsUser? FindByEmpID(int empId)
+        {
+            UserWithRoleDTO? UWUDTO = UserData.GetFullUserByEmpID(empId);
+
+            if (UWUDTO != null)
+                return new clsUser(UWUDTO, enMode.Update);
 
             return null;
         }

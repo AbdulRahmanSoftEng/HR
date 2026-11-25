@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HRMSystemFrontend.DTOs
+namespace HRMSystemFrontend.DTOs.Dashbord
 {
     public class RecentAttendanceDTO
     {

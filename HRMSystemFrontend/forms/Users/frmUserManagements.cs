@@ -102,5 +102,21 @@ namespace HRMSystemFrontend.forms.Users
         {
             AddUser();
         }
+
+        private void showInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvUsers.SelectedCells.Count > 0)
+            {
+                int employeeId = (int)dgvUsers.CurrentRow.Cells[1].Value;
+                frmShowUserInfo showInfoForm = new frmShowUserInfo();
+                showInfoForm.ShowUserInfo(employeeId);
+                showInfoForm.ShowDialog();
+
+            }
+            else
+            {
+                Msg.ShowDialog("قم بتحديد الموظف المراد تعديل بياناته", enTypeIcon.Information);
+            }
+        }
     }
 }

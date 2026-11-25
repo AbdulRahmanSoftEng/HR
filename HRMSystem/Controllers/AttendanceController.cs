@@ -1,11 +1,14 @@
 ﻿using BuisnessLogic;
-using DataAccess.DTOs;
+using DataAccess.DTOs.Attendance;
+using DataAccess.DTOs.Dashbord;
+using DataAccess.DTOs.Employee;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Xml.Linq;
 
 namespace HRMSystem.Controllers
 {
-    [Route("api/Attendance")]
+    [Route("api/Attendances")]
     [ApiController]
     public class AttendanceController : ControllerBase
     {
@@ -20,6 +23,26 @@ namespace HRMSystem.Controllers
             {
                 List<AttendanceDTO> attendances = Attendance.GetAllAttendance();
                 return Ok(attendances);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(
+                        StatusCodes.Status500InternalServerError,
+                        "An unexpected error occurred."
+                    );
+            }
+        }
+
+        // GET: api/Attendance/Employees
+        [HttpGet("EmpForAtt", Name = "GetEmployeesForAttendance")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public ActionResult<List<EmployeeForAttendanceDTO>> GetEmployeesForAttendance()
+        {
+            try
+            {
+                List<EmployeeForAttendanceDTO> employeeForAttendances = Attendance.GetEmployeesForAttendance();
+                return Ok(employeeForAttendances);
             }
             catch (Exception ex)
             {
@@ -151,5 +174,57 @@ namespace HRMSystem.Controllers
                     );
             }
         }
+
+        // GET: api/Attendance/Pagination
+        [HttpGet("Pagination", Name = "GetTodayAttendanceRecords")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public ActionResult<List<TodayAttendanceRecords>> GetTodayAttendanceRecords([FromQuery] TodayAttendanceRecordPagination pagination)
+        {
+            if (pagination.PageNumber <= 0 || pagination.PagePerNumber <= 0)
+                return BadRequest("Invalied pageNumber or pagePerNumber");
+
+            try
+            {
+                List<TodayAttendanceRecords> attendanceRecords = Attendance.GetTodayAttendanceRecords(pagination);
+
+                return Ok(attendanceRecords);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(
+                        StatusCodes.Status500InternalServerError,
+                        "An unexpected error occurred. "+ex.Message
+                    );
+            }
+        }
+
+        [HttpGet("Statistics", Name = "GetTodayAttendanceStatistics")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public ActionResult<DashboardDTO> GetTodayAttendanceStatistics()
+        {
+            try
+            {
+                TodayAttendanceStatisticsDTO statisticsDTO = Attendance.GetTodayAttendanceStatistics();
+
+                if (statisticsDTO == null)
+                    return StatusCode(
+                            StatusCodes.Status500InternalServerError,
+                            "Internale server error to featch data");
+
+                return Ok(statisticsDTO);
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(
+                        StatusCodes.Status500InternalServerError,
+                        "An axexception error failed");
+            }
+        }
+
+
     }
 }

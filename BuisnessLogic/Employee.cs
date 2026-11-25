@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using DataAccess.Data;
-using DataAccess.DTOs;
+using DataAccess.DTOs.Employee;
 
 namespace BuisnessLogic
 {

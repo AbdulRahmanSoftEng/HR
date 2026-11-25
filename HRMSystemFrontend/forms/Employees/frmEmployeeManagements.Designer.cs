@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            dgvUsers = new DataGridView();
+            dgvEmployees = new DataGridView();
             lblCount = new Label();
             textBox1 = new TextBox();
             btnAddNew = new Button();
@@ -40,22 +40,23 @@
             deleteUserToolStripMenuItem = new ToolStripMenuItem();
             sendSMSToolStripMenuItem = new ToolStripMenuItem();
             sennEMAILToolStripMenuItem = new ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)dgvUsers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvEmployees).BeginInit();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // dgvUsers
+            // dgvEmployees
             // 
-            dgvUsers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvUsers.BackgroundColor = Color.FromArgb(224, 224, 224);
-            dgvUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUsers.Location = new Point(12, 408);
-            dgvUsers.Name = "dgvUsers";
-            dgvUsers.RightToLeft = RightToLeft.No;
-            dgvUsers.RowHeadersWidth = 51;
-            dgvUsers.Size = new Size(1480, 400);
-            dgvUsers.TabIndex = 2;
+            dgvEmployees.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvEmployees.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvEmployees.BackgroundColor = Color.FromArgb(224, 224, 224);
+            dgvEmployees.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEmployees.ContextMenuStrip = contextMenuStrip1;
+            dgvEmployees.Location = new Point(12, 408);
+            dgvEmployees.Name = "dgvEmployees";
+            dgvEmployees.RightToLeft = RightToLeft.No;
+            dgvEmployees.RowHeadersWidth = 51;
+            dgvEmployees.Size = new Size(1480, 400);
+            dgvEmployees.TabIndex = 2;
             // 
             // lblCount
             // 
@@ -104,37 +105,38 @@
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { showInfoToolStripMenuItem, updateInfoToolStripMenuItem, deleteUserToolStripMenuItem, sendSMSToolStripMenuItem, sennEMAILToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.RightToLeft = RightToLeft.Yes;
-            contextMenuStrip1.Size = new Size(178, 124);
+            contextMenuStrip1.Size = new Size(198, 124);
             // 
             // showInfoToolStripMenuItem
             // 
             showInfoToolStripMenuItem.Name = "showInfoToolStripMenuItem";
-            showInfoToolStripMenuItem.Size = new Size(177, 24);
-            showInfoToolStripMenuItem.Text = "Show User Info";
+            showInfoToolStripMenuItem.Size = new Size(197, 24);
+            showInfoToolStripMenuItem.Text = "Show Info";
+            showInfoToolStripMenuItem.Click += showInfoToolStripMenuItem_Click;
             // 
             // updateInfoToolStripMenuItem
             // 
             updateInfoToolStripMenuItem.Name = "updateInfoToolStripMenuItem";
-            updateInfoToolStripMenuItem.Size = new Size(177, 24);
-            updateInfoToolStripMenuItem.Text = "Update User";
+            updateInfoToolStripMenuItem.Size = new Size(197, 24);
+            updateInfoToolStripMenuItem.Text = "Update Employee";
             updateInfoToolStripMenuItem.Click += updateInfoToolStripMenuItem_Click;
             // 
             // deleteUserToolStripMenuItem
             // 
             deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            deleteUserToolStripMenuItem.Size = new Size(177, 24);
-            deleteUserToolStripMenuItem.Text = "Delete User";
+            deleteUserToolStripMenuItem.Size = new Size(197, 24);
+            deleteUserToolStripMenuItem.Text = "Delete Employee";
             // 
             // sendSMSToolStripMenuItem
             // 
             sendSMSToolStripMenuItem.Name = "sendSMSToolStripMenuItem";
-            sendSMSToolStripMenuItem.Size = new Size(177, 24);
+            sendSMSToolStripMenuItem.Size = new Size(197, 24);
             sendSMSToolStripMenuItem.Text = "Send SMS";
             // 
             // sennEMAILToolStripMenuItem
             // 
             sennEMAILToolStripMenuItem.Name = "sennEMAILToolStripMenuItem";
-            sennEMAILToolStripMenuItem.Size = new Size(177, 24);
+            sennEMAILToolStripMenuItem.Size = new Size(197, 24);
             sennEMAILToolStripMenuItem.Text = "Senn EMAIL";
             // 
             // frmEmployeeManagements
@@ -146,16 +148,16 @@
             Controls.Add(btnAddNew);
             Controls.Add(textBox1);
             Controls.Add(lblCount);
-            Controls.Add(dgvUsers);
+            Controls.Add(dgvEmployees);
             Name = "frmEmployeeManagements";
             Text = "frmUserEmployees";
             Load += frmEmployeeManagements_Load;
-            Controls.SetChildIndex(dgvUsers, 0);
+            Controls.SetChildIndex(dgvEmployees, 0);
             Controls.SetChildIndex(lblCount, 0);
             Controls.SetChildIndex(textBox1, 0);
             Controls.SetChildIndex(btnAddNew, 0);
             Controls.SetChildIndex(comboBox1, 0);
-            ((System.ComponentModel.ISupportInitialize)dgvUsers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvEmployees).EndInit();
             contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -163,7 +165,7 @@
 
         #endregion
 
-        private DataGridView dgvUsers;
+        private DataGridView dgvEmployees;
         private Label lblCount;
         private TextBox textBox1;
         private Button btnAddNew;

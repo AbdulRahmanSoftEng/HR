@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.DTOs
+namespace DataAccess.DTOs.Dashbord
 {
     public class DashboardDTO
     { 
@@ -13,5 +13,7 @@ namespace DataAccess.DTOs
         public int ActiveDepartments { get; set; }
         public int TodayAttendance { get; set; }
         public int TodayAbsence { get; set; }
+
+        
     }
 }

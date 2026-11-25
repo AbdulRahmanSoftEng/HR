@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.DTOs
+namespace HRMSystemFrontend.DTOs.Attendance
 {
     public class AttendanceDTO
     {
-
         public int AttendanceID { get; set; }
 
         public int EmployeeID { get; set; }

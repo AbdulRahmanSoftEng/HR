@@ -1,7 +1,7 @@
-﻿using DataAccess.DTOs;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using System.Data;
 using DataAccess.Settings;
+using DataAccess.DTOs.User;
 
 namespace DataAccess.Data
 {
@@ -85,6 +85,47 @@ namespace DataAccess.Data
                                 RoleID = reader.GetInt32(reader.GetOrdinal("RoleID")),
                                 RoleName = reader.GetString(reader.GetOrdinal("RoleName")),
                                 IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
+
+                            };
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        // =========================================
+        // 2. Get Full User By Employee ID
+        // =========================================
+
+        public static UserWithRoleDTO? GetFullUserByEmpID(int empId)
+        {
+            using (SqlConnection connection =
+                   new SqlConnection(DbSettings.connection))
+            {
+                using (SqlCommand command =
+                       new SqlCommand("SP_GetUserByEmpID", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.Add("@EmployeeID", SqlDbType.Int)
+                        .Value = empId;
+
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new UserWithRoleDTO
+                            {
+                                UserID = reader.GetInt32(reader.GetOrdinal("UserID")),
+                                Username = reader.GetString(reader.GetOrdinal("Username")),
+                                RoleID = reader.GetInt32(reader.GetOrdinal("RoleID")),
+                                RoleName = reader.GetString(reader.GetOrdinal("RoleName")),
+                                UserIsActive = reader.GetBoolean(reader.GetOrdinal("UserIsActive")),
                                 CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"))
 
                             };

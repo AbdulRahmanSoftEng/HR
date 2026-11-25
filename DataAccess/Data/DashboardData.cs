@@ -1,4 +1,4 @@
-﻿using DataAccess.DTOs;
+﻿using DataAccess.DTOs.Dashbord;
 using DataAccess.Settings;
 using Microsoft.Data.SqlClient;
 using System.Data;

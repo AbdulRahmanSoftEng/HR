@@ -9,7 +9,8 @@
       "HRMSystemFrontend/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "11.0.0-rc.3.26522.148",
-          "Microsoft.Extensions.Configuration.Json": "11.0.0-rc.3.26522.148"
+          "Microsoft.Extensions.Configuration.Json": "11.0.0-rc.3.26522.148",
+          "WinForms.DataVisualization": "1.10.2"
         },
         "runtime": {
           "HRMSystemFrontend.dll": {}
@@ -156,6 +157,20 @@
             "localPath": "System.Text.Json.dll"
           }
         }
+      },
+      "WinForms.DataVisualization/1.10.2": {
+        "runtime": {
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.10.2.0",
+            "localPath": "WinForms.DataVisualization.Utilities.dll"
+          },
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.10.2.0",
+            "localPath": "WinForms.DataVisualization.dll"
+          }
+        }
       }
     }
   },
@@ -248,6 +263,13 @@
       "sha512": "sha512-py2Y/+drMHpeGUvhm+k6x1OeRaqmCrcOKjNs9XfUS2fGFop+Np3xIwXQaXodumRPF3EHFHdyb74lKA0kI+evlg==",
       "path": "system.text.json/11.0.0-rc.3.26522.148",
       "hashPath": "system.text.json.11.0.0-rc.3.26522.148.nupkg.sha512"
+    },
+    "WinForms.DataVisualization/1.10.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zdnPgnY1nggdYhzldvwCLpSA5FI2pNsoAUtwNzCm6Dbxt6Und4a6FuZUFjoWgTlOYN0iPrlOqwaQuj54Owq9Mg==",
+      "path": "winforms.datavisualization/1.10.2",
+      "hashPath": "winforms.datavisualization.1.10.2.nupkg.sha512"
     }
   }
 }

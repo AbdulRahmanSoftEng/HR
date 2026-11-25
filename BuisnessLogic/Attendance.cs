@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using DataAccess.Data;
-using DataAccess.DTOs;
+using DataAccess.DTOs.Attendance;
 
 namespace BuisnessLogic
 {
@@ -61,6 +61,21 @@ namespace BuisnessLogic
                 return new Attendance(ADTO);
 
             return null;
+        }
+
+        public static TodayAttendanceStatisticsDTO GetTodayAttendanceStatistics()
+        {
+            return AttendanceData.GetTodayAttendanceStatistics();
+        }
+
+        public static List<EmployeeForAttendanceDTO> GetEmployeesForAttendance()
+        {
+            return AttendanceData.GetEmployeesForAttendance();
+        }
+
+        public static List<TodayAttendanceRecords> GetTodayAttendanceRecords(TodayAttendanceRecordPagination pagination)
+        {
+            return AttendanceData.GetTodayAttendanceRecords(pagination);
         }
 
         public static List<AttendanceDTO> GetByEmployee(int employeeID)
